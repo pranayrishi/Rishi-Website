@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UIA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link 
+            rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" 
+            />
+        <link rel="stylesheet" href="style.css" />
+        <title> Rishi's Projects</title>
+    </head>
+    <body>
+        <header>
+            <div class='navbar'>
+                <div class='logo'><a href="index.html">Rishi Nalem</a></div>
+                <ul class="links">
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='projects.html'>Projects</a></li>
+                    <li><a href='conferences.html'>Conferences</a></li>
+                    <li><a href='about.html'>About</a></li>
+                </ul>
+                <a href="#" class="action_btn">Get Started</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href='home'>Home</a></li>
+                    <li><a href='projects.html'>Projects</a></li>
+                    <li><a href='conferences.html'>Conferences</a></li>
+                    <li><a href='about.html'>About</a></li>
+                    <li><a href="#" class="action_btn">Get Started</a></li>
+            </div>
+        </header>
+
+        <main>
+            <section id="hero">
+                <h1>My Projects</h1>
+                <p>
+                    Here are a list of projects that I have created<br /> Programming and Robotics
+                </p>
+            </section>
+        </main>
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen 
+                    ? "fa-solid fa-xmark"
+                    : "fa-solid fa-bars"
+            }
+        </script>
+    </body>
+    <!-- Alan AI Ping Pong Game (Pre-Internship)-->
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>1. Alan AI Ping Pong Game</h1>
+                </div>
+                <div class="content">
+                    <h3>April 2022 - June 2022</h3>
+                    <p>For my internship with Alan AI, I had to create a game with a voice assistant, this is where I developed my Alan AI Ping Pong Game enabled with the Alan AI voice assistant.</p>
+                    <div class="button">
+                        <a href="https://pranayrishi.github.io/alanaipingponggame/">More Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="images/Alan_Pong.png">
+            </div>
+        </div>
+    </div>
+
+    <!-- Hella Healthy Essentials Product Survey (Externship) -->
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>2. Hella Healthy Essentials Product Survey</h1>
+                </div>
+                <div class="content">
+                    <h3>June 2022 - July 2022</h3>
+                    <p>Developed a survey to help find suitable products for the user's needs by about 20%</p>
+                    <div class="button">
+                        <a href="https://www.youtube.com/watch?v=bBYx4afhzqA&t=22s">More Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="images/Hella_Healthy_Picture.png">
+            </div>
+        </div>
+    </div>
+    <!-- Alan AI GitHub Application (Internship)-->
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>3. Alan AI Github FAQ Applications</h1>
+                </div>
+                <div class="content">
+                    <h3>June 2022 - July 2022</h3>
+                    <p>Developed a GitHub Application using Alan AI, a voice enabled program, which resulted in helping companies reduce call wait time for more serious questions and people spending time in long wait time calls.</p>
+                    <div class="button">
+                        <a href="https://docs.google.com/presentation/d/1tj-gSIJlk6qJKfkAYkdsITV7sDCoQcIWmyuD8v5yi14/edit#slide=id.p">More Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="images/Github_FAQ.png">
+            </div>
+        </div>
+    </div>
+    <!-- Microbit Encryption, Decryption -->
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>4. Microbit Ceasar Cipher Encryption Decryption</h1>
+                </div>
+                <div class="content">
+                    <h3>March 2023 - April 2023</h3>
+                    <p>I have created a Ceasar Cipher Encryption and Decryption System using Microbit. This protects valuable information being transmitted by radio technology by 15%</p>
+                    <div class="button">
+                        <a href="https://www.youtube.com/watch?v=bIt3S9f6cc0&t=1s">More Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="images/Microbit_Encrypt_Decrypt.png">
+            </div>
+        </div>
+    </div>
+    <!-- AI Robot Built with Arduino and Raspberry Pi -->
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>5. AI Robot Arm built with Arduino and Raspberry Pi</h1>
+                </div>
+                <div class="content">
+                    <h3>March 2023 - April 2023</h3>
+                    <p>I have completed a full Elite Course in Evodyne Robotics Completed the Elite Track Course where I gained expertise in arduino, breadboards, wiring, motor control, sensors, electronics, mechanical design, as well as more knowledge in raspberry pi, C++, Python, Networking, Image Processing, Computer Vision by building an Articulated Snake Robot, AI Enabled Robotic Arm as well as an Autonomous Mobile Robot.</p>
+                    <div class="button">
+                        <a href="https://www.youtube.com/watch?v=CBZo3_qBZF0">More Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="images/Rishi_Robot.png">
+            </div>
+        </div>
+    </div>
+    <!-- 6. VEX IQ: 2022-2023 Slapshot Season -->
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>6. VEX IQ: 2022-2023 Slapshot Season</h1>
+                </div>
+                <div class="content">
+                    <h3>May 2023 - June 2023</h3>
+                    <p>For my third internship at Dillman's Emporium of Antiquities, I have created an app using flutter to help their company launch their first app. With this application, I have helped the company upscaled the communication between buyers and sellers who are willing to buy and sell antique items and grow the company by 10%. </p>
+                    <div class="button">
+                        <a href="https://www.youtube.com/playlist?list=PLl_15WI9Q2fY1P4x8rKOBSB7q3DIV85LU">More Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="images/VEXIQ_Tournament.jpg">
+            </div>
+        </div>
+    </div>
+    <!-- Dillman's Emporium of Anitquities App -->
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>7. Dillman's Emporium of Antiquities App (Pre-Internship)</h1>
+                </div>
+                <div class="content">
+                    <h3>May 2023 - June 2023</h3>
+                    <p>For my third internship at Dillman's Emporium of Antiquities, I have created an app using flutter to help their company launch their first app. With this application, I have helped the company upscaled the communication between buyers and sellers who are willing to buy and sell antique items and grow the company by 10%. </p>
+                    <div class="button">
+                        <a href="https://www.youtube.com/watch?v=5Q0CJFjN8Tc">More Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="images/Dillmans_App.png">
+            </div>
+        </div>
+    </div>
+</html>
