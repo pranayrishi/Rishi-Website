@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UIA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link 
+            rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" 
+            />
+        <link rel="stylesheet" href="style.css" />
+        <title>Rishi Nalem</title>
+    </head>
+    <body>
+        <header>
+            <div class='navbar'>
+                <div class='logo'><a href="index.html">Rishi Nalem</a></div>
+                <ul class="links">
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='projects.html'>Projects</a></li>
+                    <li><a href='youtube.html'>Youtube</a></li>
+                    <li><a href='conferences.html'>Conferences</a></li>
+                    <li><a href='about.html'>About</a></li>
+                </ul>
+                <a href="projects.html" class="action_btn">Get Started</a>
+            </div>
+        </header>
+
+        <main>
+            <section id="hero">
+                <h1>My Youtube Journey</h1>
+                <p>
+                    Starting 7th grade, I have started by own Youtube Channel and enjoy to post videos in it.<br />
+                </p>
+            </section>
+        </main>
+        
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-fe731e12-8951-4028-8e28-727ff5fb751f"></div>
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen 
+                    ? "fa-solid fa-xmark"
+                    : "fa-solid fa-bars"
+            }
+        </script>
+    </body>
+</html>
