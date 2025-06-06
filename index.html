@@ -1,54 +1,652 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5520971020181605"
-     crossorigin="anonymous"></script>
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UIA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link 
-            rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" 
-            />
-        <link rel="stylesheet" href="style.css" />
-        <title>Rishi Nalem</title>
-    </head>
-    <body>
-        <header>
-            <div class='navbar'>
-                <div class='logo'><a href="index.html">Rishi Nalem</a></div>
-                <ul class="links">
-                    <li><a href='index.html'>Home</a></li>
-                    <li><a href='projects.html'>Projects</a></li>
-                    <li><a href='youtube.html'>Youtube</a></li>
-                    <li><a href='conferences.html'>Conferences</a></li>
-                    <li><a href='about.html'>About</a></li>
-                </ul>
-                <a href="projects.html" class="action_btn">Get Started</a>
-            </div>
-        </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishi Nalem - Software Developer & Robotics Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <main>
-            <section id="hero">
-                <h1>Welcome!</h1>
-                <p>
-                    On this site, you can navigate through projects that I have built throughout my academic years.<br />
-                </p>
-            </section>
-        </main>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
 
-        <script>
-            const toggleBtn = document.querySelector('.toggle_btn')
-            const toggleBtnIcon = document.querySelector('.toggle_btn i')
-            const dropDownMenu = document.querySelector('.dropdown_menu')
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
 
-            toggleBtn.onclick = function () {
-                dropDownMenu.classList.toggle('open')
-                const isOpen = dropDownMenu.classList.contains('open')
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
 
-                toggleBtnIcon.classList = isOpen 
-                    ? "fa-solid fa-xmark"
-                    : "fa-solid fa-bars"
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.2s forwards;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.4s forwards;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Main Content */
+        .main-content {
+            background: white;
+            min-height: 100vh;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card i {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .skill-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-image {
+            height: 200px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .project-date {
+            color: #667eea;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
-        </script>
-    </body>
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Rishi Nalem</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#conferences">Conferences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Rishi Nalem</h1>
+            <p>Software Developer & Robotics Engineer</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About Me</h2>
+                    <p>Passionate about technology, innovation, and creating solutions that make a difference</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>Pranay Rishi Nalem</h3>
+                        <p>I have a deep passion towards robotics and programming and I am preparing to pursue my dreams in the future. I am always open for new opportunities to broaden my skill set in robotics and programming.</p>
+                        <p>With experience in over 6 programming languages and 4 years of hands-on experience with robotics, I've worked on various projects ranging from AI-powered applications to autonomous robotics systems.</p>
+                        <a href="#projects" class="btn btn-primary">Explore My Projects</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/Rishi_Image.jpg" alt="Rishi Nalem" style="width: 300px; height: 300px; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section" style="background: #f8fafc;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Skills & Expertise</h2>
+                    <p>Technologies and areas where I excel</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-code"></i>
+                        <h4>Programming Languages</h4>
+                        <p>Python, C++, JavaScript, Java, Flutter/Dart</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-robot"></i>
+                        <h4>Robotics</h4>
+                        <p>Arduino, Raspberry Pi, VEX IQ, Microbit, Sensor Integration</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-brain"></i>
+                        <h4>AI & Machine Learning</h4>
+                        <p>Voice Assistants, Computer Vision, Alan AI Integration</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>App Development</h4>
+                        <p>Flutter Mobile Apps, Web Applications, UI/UX Design</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Featured Projects</h2>
+                    <p>A showcase of my work in programming and robotics</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>Alan AI Ping Pong Game</h4>
+                            <div class="project-date">April 2022 - June 2022</div>
+                            <p>Voice-enabled ping pong game developed during my Alan AI internship, featuring advanced voice assistant integration.</p>
+                            <a href="https://pranayrishi.github.io/alanaipingponggame/" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>Alan AI GitHub FAQ Application</h4>
+                            <div class="project-date">June 2022 - July 2022</div>
+                            <p>GitHub application using Alan AI that helps companies reduce call wait times by automating FAQ responses.</p>
+                            <a href="#" class="project-link">View Details →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>AI Robot Arm</h4>
+                            <div class="project-date">March 2023 - April 2023</div>
+                            <p>AI-enabled robotic arm built with Arduino and Raspberry Pi, featuring computer vision and autonomous control.</p>
+                            <a href="https://www.youtube.com/watch?v=CBZo3_qBZF0" class="project-link">Watch Demo →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>Microbit Caesar Cipher</h4>
+                            <div class="project-date">March 2023 - April 2023</div>
+                            <p>Encryption and decryption system using Microbit with radio technology for secure data transmission.</p>
+                            <a href="https://www.youtube.com/watch?v=bIt3S9f6cc0&t=1s" class="project-link">View Demo →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>Dillman's Antiquities App</h4>
+                            <div class="project-date">May 2023 - June 2023</div>
+                            <p>Flutter mobile application for antique marketplace, improving buyer-seller communication by 10%.</p>
+                            <a href="https://www.youtube.com/watch?v=5Q0CJFjN8Tc" class="project-link">View App →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>Hella Healthy Essentials Survey</h4>
+                            <div class="project-date">June 2022 - July 2022</div>
+                            <p>Product recommendation survey system that improved product matching accuracy by 20%.</p>
+                            <a href="https://www.youtube.com/watch?v=bBYx4afhzqA&t=22s" class="project-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conferences Section -->
+        <section id="conferences" class="section" style="background: #f8fafc;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Conferences & Presentations</h2>
+                    <p>Speaking engagements and professional events</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-presentation"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>Pilot City Pin-Up Presentation</h4>
+                            <div class="project-date">August 2022</div>
+                            <p>Presented Alan AI GitHub Application to business owners and professional career leaders.</p>
+                            <a href="https://docs.google.com/presentation/d/1tj-gSIJlk6qJKfkAYkdsITV7sDCoQcIWmyuD8v5yi14/edit#slide=id.p" class="project-link">View Presentation →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>VEX IQ Robotics Competition</h4>
+                            <div class="project-date">January 21, 2023</div>
+                            <p>Participated in my first VEX IQ robotics competition and reached the semi-finals.</p>
+                            <a href="https://www.youtube.com/@dragoncoders/streams" class="project-link">Watch Highlights →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>Fremont Unified CTE Presentation</h4>
+                            <div class="project-date">May 2023</div>
+                            <p>Showcased Python and Robotics projects to demonstrate effective CTE fund utilization.</p>
+                            <a href="#" class="project-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Get In Touch</h2>
+                    <p>Let's connect and explore opportunities together</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/rishi-nalem-8161b7244/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@programmingwithpranay"><i class="fab fa-youtube"></i></a>
+                    <a href="https://github.com/pranayrishi"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Rishi Nalem. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+</body>
 </html>
