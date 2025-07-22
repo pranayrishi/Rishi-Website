@@ -3,22 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rishi Nalem - Software Developer & Robotics Engineer</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Rishi Nalem - Software Developer, Robotics Engineer & AI Innovator | Portfolio</title>
+    <meta name="description" content="Pranay Rishi Nalem - Expert Software Developer and Robotics Engineer specializing in AI, Machine Learning, and innovative technology solutions. Founder of Nalem Study Circle nonprofit.">
+    <meta name="keywords" content="Rishi Nalem, Software Developer, Robotics Engineer, AI, Machine Learning, Python, JavaScript, Flutter, Arduino, Raspberry Pi, Nalem Study Circle">
+    <meta name="author" content="Pranay Rishi Nalem">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rishinalem.com">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Rishi Nalem - Software Developer & Robotics Engineer">
+    <meta property="og:description" content="Expert in AI, Machine Learning, and innovative technology solutions. Founder of Nalem Study Circle nonprofit.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rishinalem.com">
+    <meta property="og:image" content="https://rishinalem.com/images/og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rishi Nalem - Software Developer & Robotics Engineer">
+    <meta name="twitter:description" content="Expert in AI, Machine Learning, and innovative technology solutions.">
+    <meta name="twitter:image" content="https://rishinalem.com/images/twitter-card.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Pranay Rishi Nalem",
+        "jobTitle": "Software Developer and Robotics Engineer",
+        "description": "Expert Software Developer and Robotics Engineer specializing in AI and Machine Learning",
+        "url": "https://rishinalem.com",
+        "sameAs": [
+            "https://www.linkedin.com/in/rishi-nalem-8161b7244/",
+            "https://github.com/pranayrishi",
+            "https://www.youtube.com/@programmingwithrishinalem",
+            "https://medium.com/@pranayrishi.nalem",
+            "https://www.reddit.com/r/PranayRishiNalem/",
+            "https://www.quora.com/profile/Rishi-Nalem"
+        ]
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- External Resources -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #f093fb;
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+            --text-light: #718096;
+            --background-primary: #ffffff;
+            --background-secondary: #f7fafc;
+            --background-accent: #edf2f7;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
+            --border-radius: 12px;
+            --border-radius-lg: 20px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--background-primary);
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--background-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Loading Animation */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .page-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-content {
+            text-align: center;
+            color: white;
+        }
+
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+            margin: 0 auto 20px;
+        }
+
+        .loader-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.5s forwards;
         }
 
         /* Navigation */
@@ -27,60 +162,106 @@
             top: 0;
             width: 100%;
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
             z-index: 1000;
-            padding: 1rem 0;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-lg);
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
+            padding: 1rem 2rem;
+            height: 80px;
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #667eea;
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
+            align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
+            color: var(--text-primary);
             font-weight: 500;
-            transition: color 0.3s ease;
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: var(--transition);
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 80%;
         }
 
         .nav-links a:hover {
-            color: #667eea;
+            color: var(--primary-color);
+            background: rgba(102, 126, 234, 0.05);
         }
 
         .mobile-menu {
             display: none;
             flex-direction: column;
             cursor: pointer;
+            padding: 0.5rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .mobile-menu:hover {
+            background: rgba(102, 126, 234, 0.1);
         }
 
         .mobile-menu span {
             width: 25px;
             height: 3px;
-            background: #333;
+            background: var(--text-primary);
             margin: 3px 0;
-            transition: 0.3s;
+            transition: var(--transition);
+            border-radius: 2px;
         }
 
-        /* Hero Section */
+        /* Hero Section with Particles */
         .hero {
             height: 100vh;
             display: flex;
@@ -89,247 +270,1050 @@
             text-align: center;
             color: white;
             position: relative;
+            background: var(--gradient-primary);
+            overflow: hidden;
         }
 
-        .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.02)" points="0,1000 1000,0 1000,1000"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            font-weight: 500;
             margin-bottom: 1rem;
             opacity: 0;
-            animation: fadeInUp 1s ease forwards;
+            animation: fadeInUp 1s ease-out 0.2s forwards;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
             opacity: 0;
-            animation: fadeInUp 1s ease 0.2s forwards;
+            animation: fadeInUp 1s ease-out 0.4s forwards;
+            line-height: 1.1;
         }
 
-        .cta-buttons {
+        .hero-description {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-cta {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             justify-content: center;
+            flex-wrap: wrap;
             opacity: 0;
-            animation: fadeInUp 1s ease 0.4s forwards;
+            animation: fadeInUp 1s ease-out 0.8s forwards;
         }
 
         .btn {
-            padding: 12px 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
             border: none;
             border-radius: 50px;
             font-weight: 600;
+            font-size: 0.95rem;
             text-decoration: none;
-            transition: all 0.3s ease;
             cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
         }
 
         .btn-primary {
             background: white;
-            color: #667eea;
+            color: var(--primary-color);
+            box-shadow: var(--shadow-lg);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
         }
 
         .btn-outline {
             background: transparent;
             color: white;
-            border: 2px solid white;
+            border: 2px solid rgba(255, 255, 255, 0.8);
         }
 
         .btn-outline:hover {
             background: white;
-            color: #667eea;
+            color: var(--primary-color);
+            border-color: white;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            animation: bounce 2s infinite;
         }
 
         /* Main Content */
         .main-content {
-            background: white;
-            min-height: 100vh;
+            background: var(--background-primary);
         }
 
         .section {
-            padding: 80px 0;
+            padding: 6rem 0;
+            position: relative;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
-        .section-title {
+        .section-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition-slow);
         }
 
-        .section-title h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #333;
+        .section-header.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-subtitle {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 1rem;
         }
 
-        .section-title p {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 600px;
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
             margin: 0 auto;
+            line-height: 1.7;
         }
 
         /* About Section */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 5rem;
             align-items: center;
         }
 
+        .about-content {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: var(--transition-slow);
+        }
+
+        .about-content.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
         .about-text h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #667eea;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .about-text p {
-            margin-bottom: 1.5rem;
-            color: #666;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: var(--border-radius-lg);
+            background: var(--background-secondary);
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 500;
         }
 
         .about-image {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: var(--transition-slow);
             text-align: center;
         }
 
+        .about-image.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
         .about-image img {
-            max-width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-xl);
+            transition: var(--transition);
+        }
+
+        .about-image img:hover {
+            transform: scale(1.05);
         }
 
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
         .skill-card {
-            background: #f8fafc;
-            padding: 2rem;
-            border-radius: 15px;
+            background: var(--background-primary);
+            padding: 3rem 2rem;
+            border-radius: var(--border-radius-lg);
             text-align: center;
-            transition: transform 0.3s ease;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .skill-card.animate {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .skill-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .skill-card i {
-            font-size: 3rem;
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-
-        .skill-card h4 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
             transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
         }
 
-        .project-image {
-            height: 200px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+        .skill-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            background: var(--gradient-primary);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-size: 2rem;
+            transition: var(--transition);
         }
 
-        .project-content {
+        .skill-card:hover .skill-icon {
+            transform: scale(1.1);
+        }
+
+        .skill-card h4 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .skill-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Content Creation Section */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .content-card {
+            background: var(--background-primary);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .content-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .content-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .content-header {
             padding: 2rem;
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
         }
 
-        .project-content h4 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
-
-        .project-date {
-            color: #667eea;
-            font-size: 0.9rem;
+        .content-icon {
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
 
-        .project-content p {
-            color: #666;
+        .content-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-platform {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .content-body {
+            padding: 2rem;
+        }
+
+        .content-description {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .content-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .content-link:hover {
+            gap: 1rem;
+        }
+
+        /* Nonprofit Section */
+        .nonprofit-showcase {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 5rem 3rem;
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: var(--transition-slow);
+        }
+
+        .nonprofit-showcase.animate {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .nonprofit-showcase::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        .nonprofit-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .nonprofit-logo {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+            display: block;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .nonprofit-title {
+            font-size: 3rem;
+            font-weight: 800;
             margin-bottom: 1.5rem;
         }
 
-        .project-link {
-            color: #667eea;
+        .nonprofit-description {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .nonprofit-cta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nonprofit-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .project-link:hover {
-            text-decoration: underline;
+        .nonprofit-btn:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
         }
 
-        /* Social Links */
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
         }
 
-        .social-links a {
+        .project-card {
+            background: var(--background-primary);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .project-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .project-image {
+            height: 250px;
+            background: var(--gradient-primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: #667eea;
             color: white;
-            border-radius: 50%;
-            text-decoration: none;
-            transition: transform 0.3s ease;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
         }
 
-        .social-links a:hover {
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .project-card:hover .project-image::before {
+            left: 100%;
+        }
+
+        .project-content {
+            padding: 2.5rem;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .project-date {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .tech-tag {
+            background: rgba(102, 126, 234, 0.1);
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .project-link.github {
+            background: var(--text-primary);
+            color: white;
+        }
+
+        .project-link.github:hover {
+            background: var(--text-secondary);
+            transform: translateY(-2px);
+        }
+
+        .project-link.youtube {
+            background: #ff0000;
+            color: white;
+        }
+
+        .project-link.youtube:hover {
+            background: #cc0000;
+            transform: translateY(-2px);
+        }
+
+        .project-link.demo {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .project-link.demo:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* YouTube Videos Section */
+        .youtube-section {
+            background: var(--background-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .youtube-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .youtube-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .youtube-channel-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: var(--transition-slow);
+        }
+
+        .youtube-channel-info.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .youtube-logo {
+            width: 60px;
+            height: 60px;
+            background: #ff0000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .youtube-channel-details h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .youtube-channel-details p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .youtube-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .youtube-video-card {
+            background: var(--background-primary);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            opacity: 0;
+            transform: translateY(30px);
+            cursor: pointer;
+        }
+
+        .youtube-video-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .youtube-video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .youtube-thumbnail {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background: var(--background-accent);
+            overflow: hidden;
+        }
+
+        .youtube-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .youtube-video-card:hover .youtube-thumbnail img {
+            transform: scale(1.05);
+        }
+
+        .youtube-play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 0, 0, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .youtube-video-card:hover .youtube-play-overlay {
+            background: rgba(255, 0, 0, 1);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .youtube-duration {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .youtube-video-content {
+            padding: 1.5rem;
+        }
+
+        .youtube-video-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .youtube-video-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .youtube-video-views,
+        .youtube-video-date {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .youtube-video-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .youtube-cta {
+            text-align: center;
+            margin-top: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: var(--transition-slow);
+        }
+
+        .youtube-cta.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .youtube-subscribe-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: #ff0000;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .youtube-subscribe-btn:hover {
+            background: #cc0000;
             transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .youtube-loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .youtube-loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        .youtube-error {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+            background: var(--background-secondary);
+            border-radius: var(--border-radius-lg);
+            margin: 2rem 0;
+        }
+
+        .youtube-error i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .contact-content {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: var(--transition-slow);
+        }
+
+        .contact-content.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: var(--transition-slow);
+        }
+
+        .social-grid.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .social-card {
+            background: var(--background-primary);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-card:hover .social-icon {
+            transform: scale(1.1);
+        }
+
+        .social-card h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .social-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            color: var(--secondary-color);
         }
 
         /* Footer */
         .footer {
-            background: #333;
+            background: var(--text-primary);
             color: white;
+            padding: 3rem 0 2rem;
             text-align: center;
-            padding: 2rem 0;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            color: rgba(255, 255, 255, 0.6);
         }
 
         /* Animations */
@@ -344,7 +1328,81 @@
             }
         }
 
-        /* Mobile Responsive */
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-5px) translateX(-50%);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+
+            .about-content,
+            .contact-content {
+                transform: translateY(30px);
+            }
+
+            .about-content.animate,
+            .contact-content.animate {
+                transform: translateY(0);
+            }
+
+            .about-image,
+            .social-grid {
+                transform: translateY(30px);
+            }
+
+            .about-image.animate,
+            .social-grid.animate {
+                transform: translateY(0);
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -354,16 +1412,7 @@
                 display: flex;
             }
 
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .cta-buttons {
+            .hero-cta {
                 flex-direction: column;
                 align-items: center;
             }
@@ -371,23 +1420,96 @@
             .projects-grid {
                 grid-template-columns: 1fr;
             }
+
+            .youtube-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .youtube-channel-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .youtube-cta {
+                margin-top: 2rem;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .nonprofit-showcase {
+                padding: 3rem 2rem;
+            }
+
+            .nonprofit-title {
+                font-size: 2rem;
+            }
+
+            .nonprofit-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .section {
+                padding: 4rem 0;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">Loading Excellence...</div>
+        </div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">Rishi Nalem</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#conferences">Conferences</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#nonprofit" class="nav-link">Nonprofit</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#youtube" class="nav-link">YouTube</a></li>
+                <li><a href="#content" class="nav-link">Content</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="mobile-menu">
+            <div class="mobile-menu" id="mobileMenu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -398,65 +1520,154 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Rishi Nalem</h1>
-            <p>Software Developer & Robotics Engineer</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            <div class="hero-subtitle">Software Developer & Robotics Engineer</div>
+            <h1 class="hero-title">Pranay Rishi Nalem</h1>
+            <p class="hero-description">
+                Transforming ideas into intelligent solutions through cutting-edge technology, 
+                AI innovation, and purposeful engineering that makes a difference.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    Explore My Work
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fas fa-envelope"></i>
+                    Let's Connect
+                </a>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+            <div>Scroll to Discover</div>
         </div>
     </section>
 
     <!-- Main Content -->
     <div class="main-content">
         <!-- About Section -->
-        <section id="about" class="section">
+        <section id="about" class="section" style="background: var(--background-secondary);">
             <div class="container">
-                <div class="section-title">
-                    <h2>About Me</h2>
-                    <p>Passionate about technology, innovation, and creating solutions that make a difference</p>
+                <div class="section-header">
+                    <div class="section-subtitle">Get to Know Me</div>
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-description">
+                        Passionate innovator dedicated to creating technology solutions that empower others and drive positive change in the world.
+                    </p>
                 </div>
                 <div class="about-grid">
-                    <div class="about-text">
-                        <h3>Pranay Rishi Nalem</h3>
-                        <p>I have a deep passion towards robotics and programming and I am preparing to pursue my dreams in the future. I am always open for new opportunities to broaden my skill set in robotics and programming.</p>
-                        <p>With experience in over 6 programming languages and 4 years of hands-on experience with robotics, I've worked on various projects ranging from AI-powered applications to autonomous robotics systems.</p>
-                        <a href="#projects" class="btn btn-primary">Explore My Projects</a>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h3>Building the Future, One Innovation at a Time</h3>
+                            <p>
+                                I have a deep passion for robotics and programming, constantly preparing to pursue my dreams in the future. 
+                                I am always open to new opportunities that broaden my skill set in robotics, AI, and software development.
+                            </p>
+                            <p>
+                                With experience in over 6 programming languages and 4 years of hands-on experience with robotics, 
+                                I've developed everything from AI-powered applications to autonomous robotics systems, always with 
+                                a focus on creating meaningful impact.
+                            </p>
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">6+</div>
+                                <div class="stat-label">Programming Languages</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">4+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                        </div>
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-code"></i>
+                            View My Projects
+                        </a>
                     </div>
                     <div class="about-image">
-                        <img src="images/Rishi_Image.jpg" alt="Rishi Nalem" style="width: 300px; height: 300px; object-fit: cover;">
+                        <img src="images/Rishi_Image.jpg" alt="Pranay Rishi Nalem - Software Developer and Robotics Engineer">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="section" style="background: #f8fafc;">
+        <section id="skills" class="section" style="background: var(--background-secondary);">
             <div class="container">
-                <div class="section-title">
-                    <h2>Skills & Expertise</h2>
-                    <p>Technologies and areas where I excel</p>
+                <div class="section-header">
+                    <div class="section-subtitle">Technical Expertise</div>
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <p class="section-description">
+                        A comprehensive toolkit of modern technologies and frameworks that power innovative solutions.
+                    </p>
                 </div>
                 <div class="skills-grid">
                     <div class="skill-card">
-                        <i class="fas fa-code"></i>
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
                         <h4>Programming Languages</h4>
-                        <p>Python, C++, JavaScript, Java, Flutter/Dart</p>
+                        <p>Expert proficiency in Python, C++, JavaScript, Java, and Flutter/Dart for diverse application development and system programming.</p>
                     </div>
                     <div class="skill-card">
-                        <i class="fas fa-robot"></i>
-                        <h4>Robotics</h4>
-                        <p>Arduino, Raspberry Pi, VEX IQ, Microbit, Sensor Integration</p>
+                        <div class="skill-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4>Robotics & Hardware</h4>
+                        <p>Extensive experience with Arduino, Raspberry Pi, VEX IQ, Microbit, and advanced sensor integration for autonomous systems.</p>
                     </div>
                     <div class="skill-card">
-                        <i class="fas fa-brain"></i>
+                        <div class="skill-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
                         <h4>AI & Machine Learning</h4>
-                        <p>Voice Assistants, Computer Vision, Alan AI Integration</p>
+                        <p>Specializing in voice assistants, computer vision, natural language processing, and AI integration platforms like Alan AI.</p>
                     </div>
                     <div class="skill-card">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h4>App Development</h4>
-                        <p>Flutter Mobile Apps, Web Applications, UI/UX Design</p>
+                        <div class="skill-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Application Development</h4>
+                        <p>Full-stack development expertise in Flutter mobile apps, web applications, and intuitive UI/UX design principles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Nonprofit Section -->
+        <section id="nonprofit" class="section" style="background: var(--background-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-subtitle">Social Impact</div>
+                    <h2 class="section-title">Making Education Accessible</h2>
+                    <p class="section-description">
+                        Leveraging technology to democratize learning and create opportunities for students worldwide.
+                    </p>
+                </div>
+                <div class="nonprofit-showcase">
+                    <div class="nonprofit-content">
+                        <span class="nonprofit-logo">🧠</span>
+                        <h3 class="nonprofit-title">Nalem Study Circle</h3>
+                        <p class="nonprofit-description">
+                            A nonprofit organization dedicated to providing AI-powered personalized learning tools for students and lifelong learners. 
+                            Our mission is to make quality education accessible to everyone, regardless of background or location.
+                        </p>
+                        <div class="nonprofit-cta">
+                            <a href="https://nalemstudycircle.com" target="_blank" class="nonprofit-btn">
+                                <i class="fas fa-globe"></i>
+                                Visit Our Website
+                            </a>
+                            <a href="https://blog.nalemstudycircle.com" target="_blank" class="nonprofit-btn">
+                                <i class="fas fa-blog"></i>
+                                Read Our Blog
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -465,9 +1676,12 @@
         <!-- Projects Section -->
         <section id="projects" class="section">
             <div class="container">
-                <div class="section-title">
-                    <h2>Featured Projects</h2>
-                    <p>A showcase of my work in programming and robotics</p>
+                <div class="section-header">
+                    <div class="section-subtitle">Portfolio Showcase</div>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-description">
+                        A collection of innovative projects spanning AI, robotics, mobile development, and emerging technologies.
+                    </p>
                 </div>
                 <div class="projects-grid">
                     <div class="project-card">
@@ -475,10 +1689,28 @@
                             <i class="fas fa-gamepad"></i>
                         </div>
                         <div class="project-content">
-                            <h4>Alan AI Ping Pong Game</h4>
+                            <h4 class="project-title">Alan AI Ping Pong Game</h4>
                             <div class="project-date">April 2022 - June 2022</div>
-                            <p>Voice-enabled ping pong game developed during my Alan AI internship, featuring advanced voice assistant integration.</p>
-                            <a href="https://pranayrishi.github.io/alanaipingponggame/" class="project-link">View Project →</a>
+                            <p class="project-description">
+                                Revolutionary voice-enabled ping pong game developed during my Alan AI internship, featuring 
+                                advanced voice assistant integration and real-time game control through natural language commands.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Alan AI</span>
+                                <span class="tech-tag">Voice Recognition</span>
+                                <span class="tech-tag">Game Development</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=ODQWSnVnlJk" target="_blank" class="project-link youtube">
+                                    <i class="fab fa-youtube"></i>
+                                    Watch Demo
+                                </a>
+                                <a href="https://github.com/pranayrishi/Alan-AI-Ping-Pong-Game" target="_blank" class="project-link github">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -487,10 +1719,28 @@
                             <i class="fab fa-github"></i>
                         </div>
                         <div class="project-content">
-                            <h4>Alan AI GitHub FAQ Application</h4>
+                            <h4 class="project-title">Alan AI GitHub FAQ Application</h4>
                             <div class="project-date">June 2022 - July 2022</div>
-                            <p>GitHub application using Alan AI that helps companies reduce call wait times by automating FAQ responses.</p>
-                            <a href="#" class="project-link">View Details →</a>
+                            <p class="project-description">
+                                Intelligent GitHub application using Alan AI that helps companies reduce call wait times by 
+                                automating FAQ responses with natural language processing and voice interaction capabilities.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Alan AI</span>
+                                <span class="tech-tag">GitHub API</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">Automation</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=w79sVJ-q-Tc" target="_blank" class="project-link youtube">
+                                    <i class="fab fa-youtube"></i>
+                                    Watch Demo
+                                </a>
+                                <a href="https://github.com/pranayrishi/Alan-AI-Github-FAQ-Project" target="_blank" class="project-link github">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -499,10 +1749,24 @@
                             <i class="fas fa-robot"></i>
                         </div>
                         <div class="project-content">
-                            <h4>AI Robot Arm</h4>
+                            <h4 class="project-title">AI-Powered Robot Arm</h4>
                             <div class="project-date">March 2023 - April 2023</div>
-                            <p>AI-enabled robotic arm built with Arduino and Raspberry Pi, featuring computer vision and autonomous control.</p>
-                            <a href="https://www.youtube.com/watch?v=CBZo3_qBZF0" class="project-link">Watch Demo →</a>
+                            <p class="project-description">
+                                Advanced AI-enabled robotic arm built with Arduino and Raspberry Pi, featuring computer vision, 
+                                autonomous control, and precise manipulation capabilities for complex tasks.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Arduino</span>
+                                <span class="tech-tag">Raspberry Pi</span>
+                                <span class="tech-tag">Computer Vision</span>
+                                <span class="tech-tag">AI Control</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=CBZo3_qBZF0" target="_blank" class="project-link youtube">
+                                    <i class="fab fa-youtube"></i>
+                                    Watch Demo
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -511,10 +1775,28 @@
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <div class="project-content">
-                            <h4>Microbit Caesar Cipher</h4>
+                            <h4 class="project-title">Microbit Caesar Cipher System</h4>
                             <div class="project-date">March 2023 - April 2023</div>
-                            <p>Encryption and decryption system using Microbit with radio technology for secure data transmission.</p>
-                            <a href="https://www.youtube.com/watch?v=bIt3S9f6cc0&t=1s" class="project-link">View Demo →</a>
+                            <p class="project-description">
+                                Sophisticated encryption and decryption system using Microbit with radio technology for 
+                                secure data transmission, implementing classical cryptography with modern hardware.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Microbit</span>
+                                <span class="tech-tag">Cryptography</span>
+                                <span class="tech-tag">Radio Communication</span>
+                                <span class="tech-tag">Security</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=bIt3S9f6cc0" target="_blank" class="project-link youtube">
+                                    <i class="fab fa-youtube"></i>
+                                    Watch Demo
+                                </a>
+                                <a href="https://github.com/pranayrishi/Radio-Communication-Encryption" target="_blank" class="project-link github">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -523,10 +1805,28 @@
                             <i class="fas fa-mobile-alt"></i>
                         </div>
                         <div class="project-content">
-                            <h4>Dillman's Antiquities App</h4>
+                            <h4 class="project-title">Dillman's Antiquities Mobile App</h4>
                             <div class="project-date">May 2023 - June 2023</div>
-                            <p>Flutter mobile application for antique marketplace, improving buyer-seller communication by 10%.</p>
-                            <a href="https://www.youtube.com/watch?v=5Q0CJFjN8Tc" class="project-link">View App →</a>
+                            <p class="project-description">
+                                Comprehensive Flutter mobile application for antique marketplace, improving buyer-seller 
+                                communication by 10% with intuitive UI design and enhanced user experience features.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Dart</span>
+                                <span class="tech-tag">Mobile Development</span>
+                                <span class="tech-tag">UI/UX Design</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=5Q0CJFjN8Tc" target="_blank" class="project-link youtube">
+                                    <i class="fab fa-youtube"></i>
+                                    Watch Demo
+                                </a>
+                                <a href="https://github.com/pranayrishi/Dillman-s-Emporium-App" target="_blank" class="project-link github">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -535,57 +1835,124 @@
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <div class="project-content">
-                            <h4>Hella Healthy Essentials Survey</h4>
+                            <h4 class="project-title">Hella Healthy Essentials Survey</h4>
                             <div class="project-date">June 2022 - July 2022</div>
-                            <p>Product recommendation survey system that improved product matching accuracy by 20%.</p>
-                            <a href="https://www.youtube.com/watch?v=bBYx4afhzqA&t=22s" class="project-link">Learn More →</a>
+                            <p class="project-description">
+                                Intelligent product recommendation survey system that improved product matching accuracy by 20%, 
+                                utilizing advanced algorithms to provide personalized health and wellness recommendations.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Algorithm Design</span>
+                                <span class="tech-tag">Data Analysis</span>
+                                <span class="tech-tag">Recommendation System</span>
+                                <span class="tech-tag">Web Development</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=bBYx4afhzqA" target="_blank" class="project-link youtube">
+                                    <i class="fab fa-youtube"></i>
+                                    Watch Demo
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Conferences Section -->
-        <section id="conferences" class="section" style="background: #f8fafc;">
+        <!-- YouTube Videos Section -->
+        <section id="youtube" class="section youtube-section" style="background: var(--background-secondary);">
             <div class="container">
-                <div class="section-title">
-                    <h2>Conferences & Presentations</h2>
-                    <p>Speaking engagements and professional events</p>
+                <div class="section-header">
+                    <div class="section-subtitle">Video Content</div>
+                    <h2 class="section-title">Latest YouTube Videos</h2>
+                    <p class="section-description">
+                        Explore my latest programming tutorials, project demonstrations, and tech insights on YouTube.
+                    </p>
                 </div>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-presentation"></i>
+                <div class="youtube-channel-info">
+                    <div class="youtube-logo">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="youtube-channel-details">
+                        <h3>Programming with Rishi Nalem</h3>
+                        <p>@programmingwithrishinalem</p>
+                    </div>
+                </div>
+                <div id="youtube-videos-container">
+                    <div class="youtube-loading">
+                        <div class="youtube-loading-spinner"></div>
+                        <p>Loading latest videos...</p>
+                    </div>
+                </div>
+                <div class="youtube-cta">
+                    <a href="https://www.youtube.com/@programmingwithrishinalem" target="_blank" class="youtube-subscribe-btn">
+                        <i class="fab fa-youtube"></i>
+                        Subscribe to My Channel
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Creation Section -->
+        <section id="content" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-subtitle">Knowledge Sharing</div>
+                    <h2 class="section-title">Content & Community</h2>
+                    <p class="section-description">
+                        Sharing insights, tutorials, and discussions across multiple platforms to help others learn and grow in technology.
+                    </p>
+                </div>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <div class="content-header">
+                            <div class="content-icon">📝</div>
+                            <h3 class="content-title">Medium Articles</h3>
+                            <p class="content-platform">Technical Writing Platform</p>
                         </div>
-                        <div class="project-content">
-                            <h4>Pilot City Pin-Up Presentation</h4>
-                            <div class="project-date">August 2022</div>
-                            <p>Presented Alan AI GitHub Application to business owners and professional career leaders.</p>
-                            <a href="https://docs.google.com/presentation/d/1tj-gSIJlk6qJKfkAYkdsITV7sDCoQcIWmyuD8v5yi14/edit#slide=id.p" class="project-link">View Presentation →</a>
+                        <div class="content-body">
+                            <p class="content-description">
+                                In-depth technical articles, tutorials, and insights about software development, AI, and robotics. 
+                                Sharing knowledge and experiences to help fellow developers and enthusiasts.
+                            </p>
+                            <a href="https://medium.com/@pranayrishi.nalem" target="_blank" class="content-link">
+                                Read My Articles
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
                     </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-trophy"></i>
+                    <div class="content-card">
+                        <div class="content-header">
+                            <div class="content-icon">🗣️</div>
+                            <h3 class="content-title">Reddit Community</h3>
+                            <p class="content-platform">Discussion & Engagement</p>
                         </div>
-                        <div class="project-content">
-                            <h4>VEX IQ Robotics Competition</h4>
-                            <div class="project-date">January 21, 2023</div>
-                            <p>Participated in my first VEX IQ robotics competition and reached the semi-finals.</p>
-                            <a href="https://www.youtube.com/@dragoncoders/streams" class="project-link">Watch Highlights →</a>
+                        <div class="content-body">
+                            <p class="content-description">
+                                Active participation in tech communities, sharing projects, answering questions, and engaging in 
+                                meaningful discussions about programming and innovation.
+                            </p>
+                            <a href="https://www.reddit.com/r/PranayRishiNalem/" target="_blank" class="content-link">
+                                Join the Discussion
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
                     </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-school"></i>
+                    <div class="content-card">
+                        <div class="content-header">
+                            <div class="content-icon">❓</div>
+                            <h3 class="content-title">Quora Insights</h3>
+                            <p class="content-platform">Q&A Knowledge Sharing</p>
                         </div>
-                        <div class="project-content">
-                            <h4>Fremont Unified CTE Presentation</h4>
-                            <div class="project-date">May 2023</div>
-                            <p>Showcased Python and Robotics projects to demonstrate effective CTE fund utilization.</p>
-                            <a href="#" class="project-link">Learn More →</a>
+                        <div class="content-body">
+                            <p class="content-description">
+                                Providing detailed answers to technology-related questions, sharing expertise in programming, 
+                                robotics, and AI to help learners worldwide.
+                            </p>
+                            <a href="https://www.quora.com/profile/Rishi-Nalem" target="_blank" class="content-link">
+                                View My Answers
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -593,16 +1960,61 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section">
+        <section id="contact" class="section" style="background: var(--background-secondary);">
             <div class="container">
-                <div class="section-title">
-                    <h2>Get In Touch</h2>
-                    <p>Let's connect and explore opportunities together</p>
+                <div class="section-header">
+                    <div class="section-subtitle">Let's Connect</div>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-description">
+                        Ready to collaborate on innovative projects or discuss exciting opportunities? Let's create something amazing together.
+                    </p>
                 </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/rishi-nalem-8161b7244/"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@programmingwithrishinalem"><i class="fab fa-youtube"></i></a>
-                    <a href="https://github.com/pranayrishi"><i class="fab fa-github"></i></a>
+                <div class="contact-grid">
+                    <div class="contact-content">
+                        <h3 class="contact-title">Ready to Build the Future?</h3>
+                        <p class="contact-description">
+                            Whether you're looking for a dedicated developer, robotics engineer, or someone passionate about 
+                            AI and innovation, I'm always excited to discuss new projects and opportunities.
+                        </p>
+                        <a href="mailto:pranayrishi.nalem@gmail.com" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Send Me an Email
+                        </a>
+                    </div>
+                    <div class="social-grid">
+                        <div class="social-card">
+                            <div class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <h4>LinkedIn</h4>
+                            <p>Professional networking and career updates</p>
+                            <a href="https://www.linkedin.com/in/rishi-nalem-8161b7244/" target="_blank" class="social-link">Connect with me</a>
+                        </div>
+                        <div class="social-card">
+                            <div class="social-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <h4>GitHub</h4>
+                            <p>Open source projects and code repositories</p>
+                            <a href="https://github.com/pranayrishi" target="_blank" class="social-link">View my code</a>
+                        </div>
+                        <div class="social-card">
+                            <div class="social-icon">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <h4>YouTube</h4>
+                            <p>Project demonstrations and tutorials</p>
+                            <a href="https://www.youtube.com/@programmingwithrishinalem" target="_blank" class="social-link">Watch videos</a>
+                        </div>
+                        <div class="social-card">
+                            <div class="social-icon">
+                                <i class="fab fa-medium"></i>
+                            </div>
+                            <h4>Medium</h4>
+                            <p>Technical articles and insights</p>
+                            <a href="https://medium.com/@pranayrishi.nalem" target="_blank" class="social-link">Read articles</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -610,13 +2022,102 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Rishi Nalem. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-logo">Rishi Nalem</div>
+            <p class="footer-text">
+                Building innovative solutions that bridge technology and human potential.
+            </p>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#youtube">YouTube</a>
+                <a href="#content">Content</a>
+                <a href="#nonprofit">Nonprofit</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pranay Rishi Nalem. All rights reserved. | Designed with ❤️ for innovation.</p>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
+        // Page Loading Animation
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('pageLoader');
+            setTimeout(() => {
+                loader.classList.add('hidden');
+            }, 1500);
+        });
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animatable elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatableElements = document.querySelectorAll('.section-header, .about-content, .about-image, .skill-card, .content-card, .nonprofit-showcase, .project-card, .youtube-channel-info, .youtube-video-card, .youtube-cta, .contact-content, .social-grid');
+            
+            animatableElements.forEach((el, index) => {
+                el.style.transitionDelay = `${index * 0.1}s`;
+                observer.observe(el);
+            });
+
+            // Load YouTube videos after DOM is ready
+            loadYouTubeVideos();
+        });
+
+        // Smooth Scrolling with Active Navigation
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section[id]');
+
+        function updateActiveNavLink() {
+            const scrollY = window.pageYOffset;
+            
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 100;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        // Navbar Scroll Effect
+        function updateNavbarStyle() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+
+        // Scroll Event Listener
+        window.addEventListener('scroll', () => {
+            updateActiveNavLink();
+            updateNavbarStyle();
+        });
+
+        // Smooth Scrolling for Anchor Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -630,23 +2131,338 @@
             });
         });
 
-        // Mobile menu toggle
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinksContainer = document.getElementById('navLinks');
 
         mobileMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            navLinksContainer.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
         });
 
-        // Add scroll effect to navbar
+        // Close mobile menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinksContainer.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Typing Animation for Hero Text
+        function typeWriter(element, text, speed = 50) {
+            let i = 0;
+            element.innerHTML = '';
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Enhanced Performance
+        // Lazy loading for images
+        const images = document.querySelectorAll('img[data-src]');
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+
+        images.forEach(img => imageObserver.observe(img));
+
+        // Parallax Effect for Hero Section
         window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
             }
         });
+
+        // Initialize animations after page load
+        setTimeout(() => {
+            document.body.classList.add('loaded');
+        }, 100);
+
+        // Error handling for external links
+        document.querySelectorAll('a[target="_blank"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                try {
+                    // Analytics tracking could go here
+                    console.log('External link clicked:', this.href);
+                } catch (error) {
+                    console.error('Error tracking external link:', error);
+                }
+            });
+        });
+
+        // Keyboard navigation support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-navigation');
+            }
+        });
+
+        document.addEventListener('mousedown', () => {
+            document.body.classList.remove('keyboard-navigation');
+        });
+
+        // YouTube Videos Functionality - Real API Integration
+        async function loadYouTubeVideos() {
+            const container = document.getElementById('youtube-videos-container');
+            
+            // YouTube Data API v3 Configuration
+            // IMPORTANT: For production, store this API key securely (server-side)
+            // Get your API key from: https://console.developers.google.com/
+            const YOUTUBE_API_KEY = 'AIzaSyBNZiw7ZG-OzMb4G1UKWp5k1QH8tqD81Hc'; // Replace with your actual API key
+            const CHANNEL_HANDLE = '@programmingwithrishinalem';
+            const MAX_RESULTS = 6;
+            
+            try {
+                // First, get the channel ID from the handle
+                const channelResponse = await fetch(
+                    `https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&q=${CHANNEL_HANDLE}&key=${YOUTUBE_API_KEY}`
+                );
+                
+                if (!channelResponse.ok) {
+                    throw new Error('Failed to fetch channel information');
+                }
+                
+                const channelData = await channelResponse.json();
+                if (!channelData.items || channelData.items.length === 0) {
+                    throw new Error('Channel not found');
+                }
+                
+                const channelId = channelData.items[0].snippet.channelId;
+                
+                // Get the latest videos from the channel
+                const videosResponse = await fetch(
+                    `https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}&type=video`
+                );
+                
+                if (!videosResponse.ok) {
+                    throw new Error('Failed to fetch videos');
+                }
+                
+                const videosData = await videosResponse.json();
+                
+                // Get detailed video statistics
+                const videoIds = videosData.items.map(item => item.id.videoId).join(',');
+                const statsResponse = await fetch(
+                    `https://www.googleapis.com/youtube/v3/videos?key=${YOUTUBE_API_KEY}&id=${videoIds}&part=statistics,contentDetails`
+                );
+                
+                const statsData = await statsResponse.json();
+                
+                // Combine video data with statistics
+                const videos = videosData.items.map((video, index) => {
+                    const stats = statsData.items[index];
+                    return {
+                        id: video.id.videoId,
+                        title: video.snippet.title,
+                        description: video.snippet.description,
+                        thumbnail: video.snippet.thumbnails.high?.url || video.snippet.thumbnails.medium?.url,
+                        publishedAt: formatDate(video.snippet.publishedAt),
+                        viewCount: formatViewCount(stats.statistics.viewCount),
+                        duration: formatDuration(stats.contentDetails.duration)
+                    };
+                });
+                
+                // Create video grid
+                displayVideos(videos, container);
+                
+            } catch (error) {
+                console.error('Error loading YouTube videos:', error);
+                
+                // Fallback: Show message and load sample videos for demo
+                console.log('Falling back to demo videos...');
+                await loadFallbackVideos(container);
+            }
+        }
+
+        // Fallback function with your actual videos for demo purposes
+        async function loadFallbackVideos(container) {
+            // Simulate loading delay
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            const demoVideos = [
+                {
+                    id: 'ODQWSnVnlJk',
+                    title: 'Alan AI Ping Pong Game - Voice-Controlled Gaming Revolution',
+                    description: 'Watch how I built a revolutionary voice-controlled ping pong game using Alan AI. This project showcases advanced voice recognition and real-time game control through natural language commands.',
+                    thumbnail: 'https://img.youtube.com/vi/ODQWSnVnlJk/maxresdefault.jpg',
+                    duration: '5:32',
+                    viewCount: '1.2K',
+                    publishedAt: '2 months ago'
+                },
+                {
+                    id: 'w79sVJ-q-Tc',
+                    title: 'Building an AI-Powered GitHub FAQ Bot with Alan AI',
+                    description: 'Learn how to create an intelligent FAQ system using Alan AI and GitHub integration. Perfect for reducing customer support load and automating responses.',
+                    thumbnail: 'https://img.youtube.com/vi/w79sVJ-q-Tc/maxresdefault.jpg',
+                    duration: '8:15',
+                    viewCount: '856',
+                    publishedAt: '3 months ago'
+                },
+                {
+                    id: 'CBZo3_qBZF0',
+                    title: 'AI Robot Arm with Computer Vision - Complete Build Guide',
+                    description: 'Complete tutorial on building an AI-powered robotic arm with Arduino, Raspberry Pi, and computer vision capabilities for autonomous object manipulation.',
+                    thumbnail: 'https://img.youtube.com/vi/CBZo3_qBZF0/maxresdefault.jpg',
+                    duration: '12:40',
+                    viewCount: '2.1K',
+                    publishedAt: '4 months ago'
+                },
+                {
+                    id: 'bIt3S9f6cc0',
+                    title: 'Microbit Caesar Cipher - Radio Encryption Project',
+                    description: 'Implementing classical cryptography with modern hardware. Learn to build a secure communication system using Microbit and radio technology.',
+                    thumbnail: 'https://img.youtube.com/vi/bIt3S9f6cc0/maxresdefault.jpg',
+                    duration: '6:28',
+                    viewCount: '634',
+                    publishedAt: '5 months ago'
+                },
+                {
+                    id: '5Q0CJFjN8Tc',
+                    title: 'Flutter Mobile App Development - Antique Marketplace',
+                    description: 'Complete Flutter app development tutorial for creating a marketplace application with modern UI/UX design and enhanced user experience.',
+                    thumbnail: 'https://img.youtube.com/vi/5Q0CJFjN8Tc/maxresdefault.jpg',
+                    duration: '15:22',
+                    viewCount: '978',
+                    publishedAt: '6 months ago'
+                },
+                {
+                    id: 'bBYx4afhzqA',
+                    title: 'Smart Recommendation System - Health & Wellness Platform',
+                    description: 'Building an intelligent product recommendation system that improves matching accuracy by 20%. Data science meets user experience design.',
+                    thumbnail: 'https://img.youtube.com/vi/bBYx4afhzqA/maxresdefault.jpg',
+                    duration: '9:45',
+                    viewCount: '743',
+                    publishedAt: '7 months ago'
+                }
+            ];
+            
+            // Add demo notice
+            const demoNotice = document.createElement('div');
+            demoNotice.style.cssText = `
+                background: rgba(255, 193, 7, 0.1);
+                border: 1px solid rgba(255, 193, 7, 0.3);
+                border-radius: 8px;
+                padding: 1rem;
+                margin-bottom: 2rem;
+                text-align: center;
+                color: #856404;
+            `;
+            demoNotice.innerHTML = `
+                <i class="fas fa-info-circle"></i>
+                <strong>Demo Mode:</strong> To show live videos, add your YouTube Data API v3 key to the configuration.
+                <a href="https://console.developers.google.com/" target="_blank" style="color: #667eea; margin-left: 0.5rem;">Get API Key</a>
+            `;
+            
+            container.appendChild(demoNotice);
+            displayVideos(demoVideos, container);
+        }
+
+        // Display videos in grid format
+        function displayVideos(videos, container) {
+            const videosHTML = `
+                <div class="youtube-grid">
+                    ${videos.map((video, index) => `
+                        <div class="youtube-video-card" style="transition-delay: ${index * 0.1}s" onclick="openYouTubeVideo('${video.id}')">
+                            <div class="youtube-thumbnail">
+                                <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" 
+                                     onerror="this.src='https://img.youtube.com/vi/${video.id}/hqdefault.jpg'">
+                                <div class="youtube-play-overlay">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="youtube-duration">${video.duration}</div>
+                            </div>
+                            <div class="youtube-video-content">
+                                <h4 class="youtube-video-title">${video.title}</h4>
+                                <div class="youtube-video-meta">
+                                    <div class="youtube-video-views">
+                                        <i class="fas fa-eye"></i>
+                                        ${video.viewCount} views
+                                    </div>
+                                    <div class="youtube-video-date">
+                                        <i class="fas fa-clock"></i>
+                                        ${video.publishedAt}
+                                    </div>
+                                </div>
+                                <p class="youtube-video-description">${video.description}</p>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            container.innerHTML += videosHTML;
+
+            // Trigger animations for video cards
+            setTimeout(() => {
+                const videoCards = document.querySelectorAll('.youtube-video-card');
+                videoCards.forEach(card => {
+                    observer.observe(card);
+                });
+            }, 100);
+        }
+
+        // Utility functions for formatting YouTube API data
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const diffTime = Math.abs(now - date);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            
+            if (diffDays === 1) return '1 day ago';
+            if (diffDays < 7) return `${diffDays} days ago`;
+            if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
+            if (diffDays < 365) return `${Math.floor(diffDays / 30)} months ago`;
+            return `${Math.floor(diffDays / 365)} years ago`;
+        }
+
+        function formatViewCount(count) {
+            const num = parseInt(count);
+            if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+            if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+            return num.toString();
+        }
+
+        function formatDuration(duration) {
+            // Convert ISO 8601 duration (PT4M13S) to readable format (4:13)
+            const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
+            const hours = (match[1] || '').replace('H', '');
+            const minutes = (match[2] || '').replace('M', '');
+            const seconds = (match[3] || '').replace('S', '');
+            
+            let formatted = '';
+            if (hours) formatted += hours + ':';
+            formatted += (minutes || '0').padStart(hours ? 2 : 1, '0') + ':';
+            formatted += (seconds || '0').padStart(2, '0');
+            
+            return formatted;
+        }
+
+        // Function to open YouTube video in new tab
+        function openYouTubeVideo(videoId) {
+            window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+            
+            // Optional: Track video clicks for analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'video_click', {
+                    'video_id': videoId,
+                    'event_category': 'engagement'
+                });
+            }
+        }
     </script>
 </body>
 </html>
