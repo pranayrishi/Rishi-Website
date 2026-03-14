@@ -12,7 +12,7 @@ const ORBITS = [
       { name: "Dart", icon: "🎯" },
       { name: "Java", icon: "☕" },
     ],
-    radius: 140,
+    radius: 120,
     speed: 20,
     color: "var(--plasma)",
   },
@@ -23,7 +23,7 @@ const ORBITS = [
       { name: "VEX IQ", icon: "🤖" },
       { name: "Microbit", icon: "📡" },
     ],
-    radius: 220,
+    radius: 190,
     speed: 30,
     color: "var(--amber)",
   },
@@ -35,7 +35,7 @@ const ORBITS = [
       { name: "Alan AI", icon: "🗣️" },
       { name: "TensorFlow", icon: "🧠" },
     ],
-    radius: 300,
+    radius: 260,
     speed: 40,
     color: "var(--plasma)",
   },
@@ -80,7 +80,8 @@ export default function Skills() {
       style={{ background: "var(--void)" }}
     >
       <div className="container-wide">
-        <div className="text-center mb-16">
+        {/* Header */}
+        <div className="text-center mb-20">
           <span
             className="text-xs font-medium tracking-[0.3em] uppercase mb-4 block"
             style={{
@@ -101,11 +102,15 @@ export default function Skills() {
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Orbital system */}
-          <div className="relative w-full lg:w-2/3 aspect-square max-w-[600px] mx-auto">
+        <div className="flex flex-col lg:flex-row items-center gap-16">
+          {/* Orbital system — desktop only */}
+          <div
+            className="relative hidden lg:block mx-auto"
+            style={{ width: 560, height: 560 }}
+          >
             {/* Center glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full"
+            <div
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full"
               style={{
                 background: "var(--plasma)",
                 boxShadow: "0 0 40px var(--plasma), 0 0 80px var(--plasma-dim)",
@@ -115,7 +120,6 @@ export default function Skills() {
             {/* Orbit rings */}
             {ORBITS.map((orbit, oi) => (
               <div key={oi}>
-                {/* Ring */}
                 <div
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
                   style={{
@@ -126,7 +130,6 @@ export default function Skills() {
                   }}
                 />
 
-                {/* Skill nodes */}
                 {orbit.skills.map((skill, si) => {
                   const angle =
                     (si / orbit.skills.length) * Math.PI * 2 +
@@ -137,13 +140,14 @@ export default function Skills() {
                   return (
                     <button
                       key={skill.name}
-                      className="absolute top-1/2 left-1/2 flex items-center justify-center transition-all duration-300 z-10"
+                      className="absolute top-1/2 left-1/2 flex items-center justify-center z-10"
                       style={{
                         transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) ${
                           activeSkill === skill.name ? "scale(1.3)" : "scale(1)"
                         }`,
-                        width: 48,
-                        height: 48,
+                        transition: "transform 0.3s, box-shadow 0.3s, border-color 0.3s, background 0.3s",
+                        width: 52,
+                        height: 52,
                         borderRadius: "50%",
                         background:
                           activeSkill === skill.name
@@ -162,7 +166,7 @@ export default function Skills() {
                       onMouseEnter={() => setActiveSkill(skill.name)}
                       onMouseLeave={() => setActiveSkill(null)}
                     >
-                      <span className="text-lg">{skill.icon}</span>
+                      <span className="text-xl">{skill.icon}</span>
                     </button>
                   );
                 })}
@@ -170,10 +174,11 @@ export default function Skills() {
             ))}
           </div>
 
-          {/* Skill detail */}
-          <div className="lg:w-1/3">
+          {/* Right side: detail panel (desktop) + full grid (mobile) */}
+          <div className="w-full lg:w-auto lg:min-w-[320px]">
+            {/* Skill detail — desktop */}
             <div
-              className="p-8 rounded-2xl transition-all duration-500"
+              className="hidden lg:block p-8 rounded-2xl transition-all duration-500 mb-6"
               style={{
                 background: "var(--shadow)",
                 border: "1px solid var(--border-faint)",
@@ -189,27 +194,35 @@ export default function Skills() {
               >
                 {activeSkill || "Hover a skill"}
               </h3>
-              <p className="text-sm" style={{ color: "var(--text-mid)" }}>
+              <p className="text-sm leading-relaxed" style={{ color: "var(--text-mid)" }}>
                 {activeSkill
                   ? `Proficient in ${activeSkill} — used across multiple projects in AI, robotics, and application development.`
                   : "Hover over any node in the orbital system to see details about each technology."}
               </p>
             </div>
 
-            {/* Mobile fallback grid */}
-            <div className="lg:hidden mt-8 grid grid-cols-3 gap-3">
+            {/* Grid — visible on all sizes, acts as main display on mobile */}
+            <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-3 gap-3">
               {ORBITS.flatMap((o) => o.skills).map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex flex-col items-center gap-1 p-3 rounded-xl"
+                  className="flex flex-col items-center gap-2 p-4 rounded-xl transition-all duration-300 hover:-translate-y-1"
                   style={{
                     background: "var(--mist)",
                     border: "1px solid var(--border-faint)",
                   }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = "var(--border-glow)";
+                    e.currentTarget.style.boxShadow = "0 4px 20px var(--plasma-dim)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = "var(--border-faint)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
                 >
-                  <span className="text-xl">{skill.icon}</span>
+                  <span className="text-2xl">{skill.icon}</span>
                   <span
-                    className="text-xs"
+                    className="text-xs font-medium"
                     style={{ color: "var(--text-mid)" }}
                   >
                     {skill.name}

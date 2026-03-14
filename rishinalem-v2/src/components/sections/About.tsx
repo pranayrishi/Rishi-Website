@@ -18,33 +18,22 @@ export default function About() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const track = trackRef.current;
+      const wrapper = wrapperRef.current;
       const panels = track?.querySelectorAll(".about-panel");
-      if (!track || !panels) return;
+      if (!track || !wrapper || !panels || panels.length === 0) return;
 
-      gsap.to(panels, {
-        xPercent: -100 * (panels.length - 1),
+      const totalScroll = (panels.length - 1) * window.innerWidth;
+
+      gsap.to(track, {
+        x: () => -(totalScroll),
         ease: "none",
         scrollTrigger: {
-          trigger: wrapperRef.current,
+          trigger: wrapper,
           pin: true,
-          scrub: 1.2,
-          snap: 1 / (panels.length - 1),
-          end: () => "+=" + track.scrollWidth,
+          scrub: 1,
+          end: () => "+=" + totalScroll,
+          invalidateOnRefresh: true,
         },
-      });
-
-      // Stat counter animations
-      const statEls = document.querySelectorAll(".about-stat-value");
-      statEls.forEach((el) => {
-        gsap.from(el, {
-          textContent: "0",
-          duration: 1.5,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 80%",
-          },
-        });
       });
     });
 
@@ -53,15 +42,20 @@ export default function About() {
 
   return (
     <section id="about">
-      <div ref={wrapperRef} className="h-[300vh]">
+      <div ref={wrapperRef} style={{ overflow: "hidden" }}>
         <div
           ref={trackRef}
-          className="sticky top-0 h-screen flex overflow-hidden"
+          className="flex"
+          style={{ width: "300vw" }}
         >
           {/* Panel 1: Who I Am */}
           <div
-            className="about-panel flex-shrink-0 w-screen h-screen flex items-center justify-center px-8 md:px-16"
-            style={{ background: "var(--ink)" }}
+            className="about-panel flex-shrink-0 flex items-center justify-center px-8 md:px-16"
+            style={{
+              width: "100vw",
+              height: "100vh",
+              background: "var(--ink)",
+            }}
           >
             <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
               <div>
@@ -103,8 +97,10 @@ export default function About() {
 
               <div className="relative flex justify-center">
                 <div
-                  className="relative w-[280px] h-[350px] md:w-[340px] md:h-[420px] rounded-2xl overflow-hidden"
+                  className="relative rounded-2xl overflow-hidden"
                   style={{
+                    width: 320,
+                    height: 400,
                     transform: "rotate(3deg)",
                     border: "1px solid var(--border-faint)",
                   }}
@@ -117,7 +113,6 @@ export default function About() {
                     sizes="340px"
                     priority
                   />
-                  {/* Glow overlay */}
                   <div
                     className="absolute inset-0"
                     style={{
@@ -132,8 +127,12 @@ export default function About() {
 
           {/* Panel 2: What I Do */}
           <div
-            className="about-panel flex-shrink-0 w-screen h-screen flex items-center justify-center px-8 md:px-16"
-            style={{ background: "var(--void)" }}
+            className="about-panel flex-shrink-0 flex items-center justify-center px-8 md:px-16"
+            style={{
+              width: "100vw",
+              height: "100vh",
+              background: "var(--void)",
+            }}
           >
             <div className="max-w-5xl w-full text-center">
               <span
@@ -190,8 +189,12 @@ export default function About() {
 
           {/* Panel 3: By The Numbers */}
           <div
-            className="about-panel flex-shrink-0 w-screen h-screen flex items-center justify-center px-8 md:px-16"
-            style={{ background: "var(--ink)" }}
+            className="about-panel flex-shrink-0 flex items-center justify-center px-8 md:px-16"
+            style={{
+              width: "100vw",
+              height: "100vh",
+              background: "var(--ink)",
+            }}
           >
             <div className="max-w-4xl w-full text-center">
               <span

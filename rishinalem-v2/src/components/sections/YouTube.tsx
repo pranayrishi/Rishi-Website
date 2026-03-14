@@ -84,7 +84,7 @@ export default function YouTube() {
       style={{ background: "var(--void)" }}
     >
       <div className="container-wide">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <span
             className="text-xs font-medium tracking-[0.3em] uppercase mb-4 block"
             style={{

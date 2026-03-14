@@ -144,7 +144,7 @@ export default function Projects() {
       style={{ background: "var(--void)" }}
     >
       <div className="container-wide">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <span
             className="text-xs font-medium tracking-[0.3em] uppercase mb-4 block"
             style={{
@@ -170,7 +170,7 @@ export default function Projects() {
           {PROJECTS.map((project) => (
             <div
               key={project.id}
-              className="project-row group border-b py-6 flex items-center justify-between gap-4 transition-all duration-300"
+              className="project-row group border-b py-8 md:py-10 flex items-center justify-between gap-4 transition-all duration-300"
               style={{
                 borderColor: "var(--border-faint)",
                 opacity: hoveredId && hoveredId !== project.id ? 0.35 : 1,

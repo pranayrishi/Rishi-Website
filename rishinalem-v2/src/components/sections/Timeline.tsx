@@ -20,21 +20,9 @@ export default function Timeline() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Year counter tied to scroll
-      gsap.to(yearRef.current, {
-        innerText: 2025,
-        snap: { innerText: 1 },
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom bottom",
-          scrub: 0.5,
-        },
-      });
-
       // Card entrance animations
       const cards = document.querySelectorAll(".timeline-card");
-      cards.forEach((card, i) => {
+      cards.forEach((card) => {
         gsap.from(card, {
           x: 60,
           opacity: 0,
@@ -42,13 +30,13 @@ export default function Timeline() {
           ease: "expo.out",
           scrollTrigger: {
             trigger: card,
-            start: "top 80%",
+            start: "top 85%",
             toggleActions: "play none none reverse",
           },
         });
       });
 
-      // SVG line draw
+      // Line draw
       const line = document.querySelector(".timeline-line");
       if (line) {
         gsap.from(line, {
@@ -71,11 +59,12 @@ export default function Timeline() {
     <section
       id="timeline"
       ref={sectionRef}
-      className="relative py-32"
+      className="section-padding relative"
       style={{ background: "var(--ink)" }}
     >
       <div className="container-wide">
-        <div className="text-center mb-20">
+        {/* Section header */}
+        <div className="text-center mb-24">
           <span
             className="text-xs font-medium tracking-[0.3em] uppercase mb-4 block"
             style={{
@@ -99,63 +88,62 @@ export default function Timeline() {
         <div className="relative max-w-4xl mx-auto">
           {/* Vertical line */}
           <div
-            className="timeline-line absolute left-0 md:left-1/2 top-0 bottom-0 w-px -translate-x-1/2"
+            className="timeline-line absolute left-4 md:left-1/2 top-0 bottom-0 w-px md:-translate-x-1/2"
             style={{ background: "var(--plasma)", opacity: 0.3 }}
           />
 
-          {/* Sticky year (desktop) */}
-          <div className="hidden md:block sticky top-1/2 -translate-y-1/2 z-20 pointer-events-none">
-            <span
-              ref={yearRef}
-              className="absolute left-1/2 -translate-x-1/2 text-8xl font-bold opacity-10"
-              style={{
-                fontFamily: "var(--font-playfair), Georgia, serif",
-                color: "var(--plasma)",
-              }}
-            >
-              2018
-            </span>
-          </div>
-
           {/* Event cards */}
-          <div className="relative z-10 space-y-16 pl-8 md:pl-0">
+          <div className="relative z-10 space-y-12 md:space-y-20">
             {EVENTS.map((event, i) => (
               <div
                 key={event.year}
-                className={`timeline-card relative flex ${
+                className={`timeline-card relative pl-12 md:pl-0 ${
                   i % 2 === 0
-                    ? "md:justify-start md:pr-[52%]"
-                    : "md:justify-end md:pl-[52%]"
+                    ? "md:pr-[54%] md:text-right"
+                    : "md:pl-[54%] md:text-left"
                 }`}
               >
                 {/* Dot on the line */}
                 <div
-                  className="absolute left-0 md:left-1/2 top-6 -translate-x-1/2 w-3 h-3 rounded-full z-10"
+                  className="absolute left-4 md:left-1/2 top-6 -translate-x-1/2 w-3 h-3 rounded-full z-10"
                   style={{
                     background: "var(--plasma)",
                     boxShadow: "0 0 12px var(--plasma-dim)",
                   }}
                 />
 
+                {/* Connector line from dot to card */}
+                <div
+                  className="hidden md:block absolute top-7 h-px"
+                  style={{
+                    background: "var(--plasma)",
+                    opacity: 0.15,
+                    ...(i % 2 === 0
+                      ? { right: "54%", left: "50%", marginLeft: "6px" }
+                      : { left: "50%", right: "auto", width: "3%", marginLeft: "6px" }),
+                  }}
+                />
+
                 {/* Card */}
                 <div
-                  className="w-full p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1"
+                  className="p-6 md:p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1"
                   style={{
                     background: "var(--shadow)",
                     border: "1px solid var(--border-faint)",
                     borderLeft: "3px solid var(--plasma)",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderLeftColor = "var(--plasma)";
                     e.currentTarget.style.boxShadow =
                       "0 8px 32px rgba(0,255,148,0.08)";
+                    e.currentTarget.style.borderColor = "var(--border-glow)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.boxShadow = "none";
+                    e.currentTarget.style.borderColor = "var(--border-faint)";
                   }}
                 >
                   <span
-                    className="text-sm font-semibold mb-1 block"
+                    className="text-sm font-bold mb-2 block"
                     style={{
                       color: "var(--plasma)",
                       fontFamily: "var(--font-jetbrains), monospace",
@@ -164,7 +152,7 @@ export default function Timeline() {
                     {event.year}
                   </span>
                   <h3
-                    className="text-xl font-bold mb-2"
+                    className="text-xl md:text-2xl font-bold mb-3"
                     style={{
                       fontFamily: "var(--font-playfair), Georgia, serif",
                       color: "var(--text-bright)",
@@ -172,7 +160,7 @@ export default function Timeline() {
                   >
                     {event.title}
                   </h3>
-                  <p className="text-sm" style={{ color: "var(--text-mid)" }}>
+                  <p className="text-sm md:text-base leading-relaxed" style={{ color: "var(--text-mid)" }}>
                     {event.desc}
                   </p>
                 </div>
