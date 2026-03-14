@@ -181,7 +181,7 @@ export default function Nonprofit() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://nalemstudycircle.com"
+              href="https://nalemstudycircle.org"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[rgba(0,255,148,0.15)]"
@@ -194,7 +194,7 @@ export default function Nonprofit() {
               Visit Nalem Study Circle
             </a>
             <a
-              href="https://blog.nalemstudycircle.com"
+              href="https://blog.nalemstudycircle.org"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium transition-colors duration-300 hover:border-[var(--border-glow)]"
