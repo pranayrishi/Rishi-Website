@@ -97,7 +97,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl">
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto flex flex-col items-center">
         {/* Headline */}
         <h1 className="mb-6">
           <div className="overflow-hidden">
@@ -141,8 +141,8 @@ export default function Hero() {
         {/* Description */}
         <p
           ref={descRef}
-          className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed mb-10"
-          style={{ color: "var(--text-mid)" }}
+          className="text-base sm:text-lg md:text-xl leading-relaxed mb-10 text-center"
+          style={{ color: "var(--text-mid)", maxWidth: "640px", width: "100%" }}
         >
           I transform abstract ideas into intelligent systems — from AI agents
           and robotics to mobile apps and interactive experiences.

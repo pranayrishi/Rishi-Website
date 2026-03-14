@@ -25,15 +25,19 @@ export default function Press() {
   return (
     <section
       id="press"
-      className="section-padding relative"
-      style={{ background: "var(--void)" }}
+      style={{ background: "var(--void)", padding: "8rem 0" }}
     >
-      <div className="container-wide">
+      <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2rem" }}>
         {/* Header */}
-        <div className="text-center mb-20">
+        <div style={{ textAlign: "center", marginBottom: "4rem" }}>
           <span
-            className="text-xs font-medium tracking-[0.3em] uppercase mb-4 block"
             style={{
+              display: "block",
+              fontSize: "0.75rem",
+              fontWeight: 500,
+              letterSpacing: "0.3em",
+              textTransform: "uppercase",
+              marginBottom: "1rem",
               color: "var(--plasma)",
               fontFamily: "var(--font-jetbrains), monospace",
             }}
@@ -41,10 +45,13 @@ export default function Press() {
             In The Press
           </span>
           <h2
-            className="text-4xl md:text-6xl lg:text-7xl font-bold italic"
             style={{
+              fontSize: "clamp(2rem, 5vw, 4.5rem)",
+              fontWeight: 700,
+              fontStyle: "italic",
               fontFamily: "var(--font-playfair), Georgia, serif",
               color: "var(--text-bright)",
+              lineHeight: 1.1,
             }}
           >
             Featured In
@@ -52,33 +59,51 @@ export default function Press() {
         </div>
 
         {/* Article cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))",
+            gap: "2rem",
+            maxWidth: 900,
+            margin: "0 auto",
+          }}
+        >
           {ARTICLES.map((article) => (
             <a
               key={article.publication}
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block p-8 md:p-10 rounded-2xl transition-all duration-300 hover:-translate-y-2"
               style={{
+                display: "block",
+                padding: "2.5rem",
+                borderRadius: 16,
                 background: "var(--shadow)",
                 border: "1px solid var(--border-faint)",
+                textDecoration: "none",
+                transition: "all 0.3s",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = "var(--border-glow)";
-                e.currentTarget.style.boxShadow =
-                  "0 12px 40px rgba(0,255,148,0.08)";
+                e.currentTarget.style.transform = "translateY(-4px)";
+                e.currentTarget.style.boxShadow = "0 12px 40px rgba(0,255,148,0.08)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = "var(--border-faint)";
+                e.currentTarget.style.transform = "translateY(0)";
                 e.currentTarget.style.boxShadow = "none";
               }}
             >
               {/* Publication badge */}
-              <div className="flex items-center gap-3 mb-6">
+              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
                 <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center"
                   style={{
+                    width: 40,
+                    height: 40,
+                    borderRadius: 12,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                     background: article.color + "18",
                     color: article.color,
                   }}
@@ -86,17 +111,23 @@ export default function Press() {
                   <Newspaper size={18} />
                 </div>
                 <span
-                  className="text-xs font-bold uppercase tracking-[0.2em]"
-                  style={{ color: article.color }}
+                  style={{
+                    fontSize: "0.7rem",
+                    fontWeight: 700,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.2em",
+                    color: article.color,
+                  }}
                 >
                   {article.publication}
                 </span>
               </div>
 
-              {/* Title */}
               <h3
-                className="text-xl md:text-2xl font-bold mb-4 group-hover:text-[var(--plasma)] transition-colors duration-300"
                 style={{
+                  fontSize: "1.4rem",
+                  fontWeight: 700,
+                  marginBottom: 12,
                   fontFamily: "var(--font-playfair), Georgia, serif",
                   color: "var(--text-bright)",
                 }}
@@ -104,18 +135,26 @@ export default function Press() {
                 {article.title}
               </h3>
 
-              {/* Excerpt */}
               <p
-                className="text-sm leading-relaxed mb-6"
-                style={{ color: "var(--text-mid)" }}
+                style={{
+                  fontSize: "0.875rem",
+                  lineHeight: 1.7,
+                  marginBottom: 20,
+                  color: "var(--text-mid)",
+                }}
               >
                 {article.excerpt}
               </p>
 
-              {/* Read link */}
               <span
-                className="inline-flex items-center gap-2 text-sm font-semibold transition-all duration-300 group-hover:gap-3"
-                style={{ color: "var(--plasma)" }}
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  fontSize: "0.875rem",
+                  fontWeight: 600,
+                  color: "var(--plasma)",
+                }}
               >
                 Read Article
                 <ExternalLink size={14} />

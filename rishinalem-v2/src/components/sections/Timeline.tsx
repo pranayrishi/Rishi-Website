@@ -1,8 +1,5 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { gsap } from "@/lib/gsap";
-
 const EVENTS = [
   { year: 2018, title: "Started Programming", desc: "Began my journey learning Python, discovering the world of code and building my first programs." },
   { year: 2019, title: "First Robotics Build", desc: "Built my first robot with Arduino, sparking a lifelong passion for hardware and engineering." },
@@ -15,56 +12,23 @@ const EVENTS = [
 ];
 
 export default function Timeline() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const cards = document.querySelectorAll(".timeline-card");
-      cards.forEach((card) => {
-        gsap.from(card, {
-          y: 40,
-          opacity: 0,
-          duration: 0.8,
-          ease: "expo.out",
-          scrollTrigger: {
-            trigger: card,
-            start: "top 88%",
-            toggleActions: "play none none reverse",
-          },
-        });
-      });
-
-      const line = document.querySelector(".timeline-line-inner");
-      if (line) {
-        gsap.from(line, {
-          scaleY: 0,
-          transformOrigin: "top center",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 60%",
-            end: "bottom 40%",
-            scrub: true,
-          },
-        });
-      }
-    });
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section
       id="timeline"
-      ref={sectionRef}
-      className="section-padding relative"
-      style={{ background: "var(--ink)" }}
+      className="relative"
+      style={{ background: "var(--ink)", padding: "8rem 0" }}
     >
-      <div className="container-wide">
-        {/* Section header */}
-        <div className="text-center mb-24 md:mb-32">
+      <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2rem" }}>
+        {/* Section header — large bottom margin to prevent overlap */}
+        <div style={{ textAlign: "center", marginBottom: "5rem" }}>
           <span
-            className="text-xs font-medium tracking-[0.3em] uppercase mb-4 block"
             style={{
+              display: "block",
+              fontSize: "0.75rem",
+              fontWeight: 500,
+              letterSpacing: "0.3em",
+              textTransform: "uppercase",
+              marginBottom: "1rem",
               color: "var(--plasma)",
               fontFamily: "var(--font-jetbrains), monospace",
             }}
@@ -72,10 +36,13 @@ export default function Timeline() {
             The Journey
           </span>
           <h2
-            className="text-4xl md:text-6xl lg:text-7xl font-bold italic"
             style={{
+              fontSize: "clamp(2rem, 5vw, 4.5rem)",
+              fontWeight: 700,
+              fontStyle: "italic",
               fontFamily: "var(--font-playfair), Georgia, serif",
               color: "var(--text-bright)",
+              lineHeight: 1.1,
             }}
           >
             My Timeline
@@ -83,41 +50,52 @@ export default function Timeline() {
         </div>
 
         {/* Timeline container */}
-        <div className="relative max-w-3xl mx-auto">
-          {/* Vertical line track (background) */}
+        <div style={{ maxWidth: 720, margin: "0 auto", position: "relative" }}>
+          {/* Vertical line */}
           <div
-            className="absolute top-0 bottom-0 w-px"
             style={{
-              left: "24px",
-              background: "rgba(255,255,255,0.06)",
-            }}
-          />
-          {/* Animated fill line */}
-          <div
-            className="timeline-line-inner absolute top-0 bottom-0 w-px"
-            style={{
-              left: "24px",
+              position: "absolute",
+              left: 23,
+              top: 0,
+              bottom: 0,
+              width: 1,
               background: "var(--plasma)",
-              opacity: 0.4,
+              opacity: 0.2,
             }}
           />
 
           {/* Event cards */}
-          <div className="relative z-10 flex flex-col gap-10 md:gap-14">
+          <div style={{ display: "flex", flexDirection: "column", gap: "2.5rem" }}>
             {EVENTS.map((event) => (
-              <div key={event.year} className="timeline-card relative flex items-start gap-6 md:gap-10">
+              <div
+                key={event.year}
+                style={{ display: "flex", alignItems: "flex-start", gap: "1.5rem" }}
+              >
                 {/* Dot + year column */}
-                <div className="flex flex-col items-center shrink-0" style={{ width: "48px" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    flexShrink: 0,
+                    width: 48,
+                  }}
+                >
                   <div
-                    className="w-3 h-3 rounded-full mt-1.5"
                     style={{
+                      width: 12,
+                      height: 12,
+                      borderRadius: "50%",
                       background: "var(--plasma)",
                       boxShadow: "0 0 12px var(--plasma-dim)",
+                      marginTop: 6,
                     }}
                   />
                   <span
-                    className="mt-2 text-xs font-bold"
                     style={{
+                      marginTop: 8,
+                      fontSize: "0.75rem",
+                      fontWeight: 700,
                       color: "var(--plasma)",
                       fontFamily: "var(--font-jetbrains), monospace",
                     }}
@@ -128,23 +106,30 @@ export default function Timeline() {
 
                 {/* Card */}
                 <div
-                  className="flex-1 p-6 md:p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1"
                   style={{
+                    flex: 1,
+                    padding: "1.5rem 2rem",
+                    borderRadius: 16,
                     background: "var(--shadow)",
                     border: "1px solid var(--border-faint)",
+                    transition: "all 0.3s",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.boxShadow = "0 8px 32px rgba(0,255,148,0.06)";
                     e.currentTarget.style.borderColor = "var(--border-glow)";
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                    e.currentTarget.style.boxShadow = "0 8px 32px rgba(0,255,148,0.06)";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.boxShadow = "none";
                     e.currentTarget.style.borderColor = "var(--border-faint)";
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "none";
                   }}
                 >
                   <h3
-                    className="text-lg md:text-xl font-bold mb-2"
                     style={{
+                      fontSize: "1.15rem",
+                      fontWeight: 700,
+                      marginBottom: 8,
                       fontFamily: "var(--font-playfair), Georgia, serif",
                       color: "var(--text-bright)",
                     }}
@@ -152,8 +137,11 @@ export default function Timeline() {
                     {event.title}
                   </h3>
                   <p
-                    className="text-sm md:text-base leading-relaxed"
-                    style={{ color: "var(--text-mid)" }}
+                    style={{
+                      fontSize: "0.9rem",
+                      lineHeight: 1.7,
+                      color: "var(--text-mid)",
+                    }}
                   >
                     {event.desc}
                   </p>

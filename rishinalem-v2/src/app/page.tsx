@@ -9,6 +9,7 @@ import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
 import Timeline from "@/components/sections/Timeline";
 import Projects from "@/components/sections/Projects";
+import Startup from "@/components/sections/Startup";
 import Nonprofit from "@/components/sections/Nonprofit";
 import Press from "@/components/sections/Press";
 import YouTube from "@/components/sections/YouTube";
@@ -33,6 +34,7 @@ export default function Home() {
         <Skills />
         <Timeline />
         <Projects />
+        <Startup />
         <Nonprofit />
         <Press />
         <YouTube />

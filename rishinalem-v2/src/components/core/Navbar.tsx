@@ -6,8 +6,8 @@ import { useScramble } from "@/hooks/useScramble";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
+  { label: "SattvaAI", href: "#startup" },
   { label: "Nonprofit", href: "#nonprofit" },
   { label: "Press", href: "#press" },
   { label: "YouTube", href: "#youtube" },
