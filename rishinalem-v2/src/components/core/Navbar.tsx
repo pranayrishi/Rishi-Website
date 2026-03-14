@@ -71,7 +71,7 @@ export default function Navbar() {
         transform: "translateX(-50%)",
         width: scrolled ? "auto" : "calc(100% - 3rem)",
         maxWidth: scrolled ? "none" : "1400px",
-        padding: scrolled ? "10px 24px" : "14px 32px",
+        padding: scrolled ? "10px 28px" : "14px 32px",
         borderRadius: scrolled ? "9999px" : "16px",
         background: scrolled ? "rgba(12,12,16,0.9)" : "rgba(12,12,16,0.4)",
         border: scrolled ? "1px solid rgba(255,255,255,0.05)" : "1px solid transparent",
@@ -80,7 +80,7 @@ export default function Navbar() {
         transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
       }}
     >
-      <div className="flex items-center justify-between">
+      <div className="flex items-center">
         {/* Logo */}
         <a
           ref={logoRef}
@@ -91,24 +91,26 @@ export default function Navbar() {
           style={{
             fontFamily: "var(--font-playfair), Georgia, serif",
             color: "var(--text-bright)",
+            marginRight: "auto",
           }}
         >
           Rishi Nalem
         </a>
 
-        {/* Desktop links — properly spaced */}
-        <div className="hidden lg:flex items-center ml-12 gap-2">
+        {/* Desktop links — separated from logo with auto margin */}
+        <div className="hidden xl:flex items-center gap-1" style={{ marginLeft: "48px" }}>
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="relative px-3 py-1.5 text-[13px] font-medium rounded-lg transition-colors duration-300 whitespace-nowrap hover:bg-white/5"
+              className="relative py-1.5 text-[13px] font-medium rounded-lg transition-colors duration-300 whitespace-nowrap hover:bg-white/5"
               style={{
                 color:
                   activeSection === link.href
                     ? "var(--plasma)"
                     : "var(--text-mid)",
+                padding: "6px 12px",
               }}
             >
               {link.label}
@@ -127,9 +129,10 @@ export default function Navbar() {
 
         {/* Mobile menu button */}
         <button
-          className="lg:hidden flex flex-col gap-1.5 p-2 ml-4"
+          className="xl:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
+          style={{ marginLeft: "16px" }}
         >
           <span
             className="block w-6 h-0.5 transition-all duration-300 origin-center"
@@ -157,7 +160,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden mt-4 flex flex-col gap-1 pb-4">
+        <div className="xl:hidden mt-4 flex flex-col gap-1 pb-4">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}

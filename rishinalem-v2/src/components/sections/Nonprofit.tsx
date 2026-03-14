@@ -141,7 +141,7 @@ export default function Nonprofit() {
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-14 w-full max-w-3xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-20 w-full max-w-3xl">
             {[
               { value: "2,400+", label: "Students Served" },
               { value: "12", label: "Countries" },

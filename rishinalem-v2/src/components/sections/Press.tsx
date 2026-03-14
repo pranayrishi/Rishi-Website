@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { gsap } from "@/lib/gsap";
 import { ExternalLink, Newspaper } from "lucide-react";
 
 const ARTICLES = [
@@ -24,29 +22,9 @@ const ARTICLES = [
 ];
 
 export default function Press() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".press-card", {
-        y: 50,
-        opacity: 0,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: "expo.out",
-        scrollTrigger: {
-          trigger: ".press-card",
-          start: "top 85%",
-        },
-      });
-    });
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section
       id="press"
-      ref={sectionRef}
       className="section-padding relative"
       style={{ background: "var(--void)" }}
     >
@@ -81,7 +59,7 @@ export default function Press() {
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="press-card group block p-8 md:p-10 rounded-2xl transition-all duration-300 hover:-translate-y-2"
+              className="group block p-8 md:p-10 rounded-2xl transition-all duration-300 hover:-translate-y-2"
               style={{
                 background: "var(--shadow)",
                 border: "1px solid var(--border-faint)",

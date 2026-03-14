@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { gsap } from "@/lib/gsap";
 import { ExternalLink, PenLine, MessageCircle, HelpCircle } from "lucide-react";
 
 const PLATFORMS = [
@@ -29,29 +27,9 @@ const PLATFORMS = [
 ];
 
 export default function Content() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".content-card", {
-        y: 40,
-        opacity: 0,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: "expo.out",
-        scrollTrigger: {
-          trigger: ".content-card",
-          start: "top 85%",
-        },
-      });
-    });
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section
       id="content"
-      ref={sectionRef}
       className="section-padding"
       style={{ background: "var(--ink)" }}
     >
@@ -78,23 +56,25 @@ export default function Content() {
         </div>
 
         {/* Marquee */}
-        <div className="overflow-hidden mb-12 py-4">
-          <div className="flex gap-8 animate-marquee-slow whitespace-nowrap">
-            {[...Array(3)].map((_, i) => (
+        <div className="overflow-hidden mb-16 py-4">
+          <div className="flex whitespace-nowrap" style={{ animation: "marquee-slow 20s linear infinite" }}>
+            {[...Array(4)].map((_, i) => (
               <span
                 key={i}
-                className="text-6xl md:text-8xl font-bold italic opacity-5"
+                className="text-5xl md:text-7xl font-bold italic mx-4"
                 style={{
                   fontFamily: "var(--font-playfair), Georgia, serif",
                   color: "var(--text-bright)",
+                  opacity: 0.04,
                 }}
               >
-                WRITE · TEACH · SHARE · GROW ·&nbsp;
+                WRITE · TEACH · SHARE · GROW ·
               </span>
             ))}
           </div>
         </div>
 
+        {/* Platform cards — visible by default, no GSAP */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {PLATFORMS.map((platform) => (
             <a
@@ -102,7 +82,7 @@ export default function Content() {
               href={platform.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="content-card group p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2"
+              className="group p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2"
               style={{
                 background: "var(--shadow)",
                 border: "1px solid var(--border-faint)",
@@ -159,10 +139,7 @@ export default function Content() {
       <style jsx>{`
         @keyframes marquee-slow {
           0% { transform: translateX(0); }
-          100% { transform: translateX(-33.33%); }
-        }
-        .animate-marquee-slow {
-          animation: marquee-slow 20s linear infinite;
+          100% { transform: translateX(-50%); }
         }
       `}</style>
     </section>

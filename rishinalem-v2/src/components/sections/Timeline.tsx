@@ -61,7 +61,7 @@ export default function Timeline() {
     >
       <div className="container-wide">
         {/* Section header */}
-        <div className="text-center mb-20 md:mb-28">
+        <div className="text-center mb-24 md:mb-32">
           <span
             className="text-xs font-medium tracking-[0.3em] uppercase mb-4 block"
             style={{
