@@ -119,6 +119,12 @@ body::after {
   }
 }
 
+/* Base link/button resets — prevent text escaping */
+a, button {
+  text-decoration: none;
+  line-height: 1.4;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

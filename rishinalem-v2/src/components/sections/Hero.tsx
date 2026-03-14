@@ -149,19 +149,26 @@ export default function Hero() {
         </p>
 
         {/* CTA */}
-        <div ref={ctaRef} className="flex flex-wrap gap-4 justify-center">
+        <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
             ref={btnRef}
             href="#projects"
             onClick={handleExploreClick}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[var(--plasma-dim)]"
+            className="inline-flex items-center justify-center gap-2 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg whitespace-nowrap"
             style={{
               background: "var(--plasma)",
               color: "var(--ink)",
+              padding: "14px 32px",
+              boxShadow: "none",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = "0 0 30px rgba(0,255,148,0.3)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = "none";
             }}
           >
-            Explore Projects
-            <span className="text-lg">&rarr;</span>
+            Explore Projects &rarr;
           </a>
           <a
             href="#about"
@@ -173,8 +180,11 @@ export default function Hero() {
                 if (lenis) lenis.scrollTo(target as HTMLElement, { offset: -80 });
               }
             }}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-medium transition-colors duration-300 hover:text-[var(--plasma)]"
-            style={{ color: "var(--text-mid)" }}
+            className="inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium transition-colors duration-300 whitespace-nowrap hover:text-[var(--plasma)]"
+            style={{
+              color: "var(--text-mid)",
+              padding: "14px 32px",
+            }}
           >
             Learn More
             <span className="animate-bounce inline-block">&darr;</span>

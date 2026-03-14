@@ -84,6 +84,7 @@ export default function YouTube() {
       style={{ background: "var(--void)" }}
     >
       <div className="container-wide">
+        {/* Header */}
         <div className="text-center mb-20">
           <span
             className="text-xs font-medium tracking-[0.3em] uppercase mb-4 block"
@@ -95,7 +96,7 @@ export default function YouTube() {
             Video Content
           </span>
           <h2
-            className="text-4xl md:text-6xl lg:text-7xl font-bold italic mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold italic mb-8"
             style={{
               fontFamily: "var(--font-playfair), Georgia, serif",
               color: "var(--text-bright)",
@@ -105,24 +106,18 @@ export default function YouTube() {
           </h2>
 
           {/* Channel info */}
-          <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full" style={{ background: "var(--shadow)", border: "1px solid var(--border-faint)" }}>
             <div
-              className="w-10 h-10 rounded-full flex items-center justify-center"
+              className="w-8 h-8 rounded-full flex items-center justify-center shrink-0"
               style={{ background: "#ff0000" }}
             >
-              <Play size={18} fill="white" color="white" />
+              <Play size={14} fill="white" color="white" />
             </div>
             <div className="text-left">
-              <p
-                className="text-sm font-semibold"
-                style={{ color: "var(--text-bright)" }}
-              >
+              <p className="text-sm font-semibold leading-tight" style={{ color: "var(--text-bright)" }}>
                 Programming with Rishi Nalem
               </p>
-              <p
-                className="text-xs"
-                style={{ color: "var(--text-dim)" }}
-              >
+              <p className="text-xs leading-tight" style={{ color: "var(--text-dim)" }}>
                 @programmingwithrishinalem
               </p>
             </div>
@@ -130,7 +125,7 @@ export default function YouTube() {
         </div>
 
         {/* Video grid */}
-        <div className="yt-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="yt-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {VIDEOS.map((video, i) => (
             <a
               key={i}
@@ -142,6 +137,14 @@ export default function YouTube() {
                 background: "var(--shadow)",
                 border: "1px solid var(--border-faint)",
               }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = "var(--border-glow)";
+                e.currentTarget.style.boxShadow = "0 8px 32px rgba(0,255,148,0.06)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "var(--border-faint)";
+                e.currentTarget.style.boxShadow = "none";
+              }}
             >
               {/* Thumbnail */}
               <div className="relative aspect-video overflow-hidden">
@@ -150,25 +153,22 @@ export default function YouTube() {
                   alt={video.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 {/* Play overlay */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/30 transition-all duration-300">
                   <div
-                    className="w-14 h-14 rounded-full flex items-center justify-center"
-                    style={{
-                      background: "rgba(255,0,0,0.9)",
-                      backdropFilter: "blur(8px)",
-                    }}
+                    className="w-12 h-12 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100"
+                    style={{ background: "rgba(255,0,0,0.9)" }}
                   >
-                    <Play size={22} fill="white" color="white" />
+                    <Play size={18} fill="white" color="white" />
                   </div>
                 </div>
                 {/* Duration badge */}
                 <span
-                  className="absolute bottom-2 right-2 text-xs px-2 py-0.5 rounded"
+                  className="absolute bottom-2 right-2 text-[11px] px-1.5 py-0.5 rounded"
                   style={{
-                    background: "rgba(0,0,0,0.8)",
+                    background: "rgba(0,0,0,0.85)",
                     color: "white",
                     fontFamily: "var(--font-jetbrains), monospace",
                   }}
@@ -178,22 +178,25 @@ export default function YouTube() {
               </div>
 
               {/* Info */}
-              <div className="p-4">
+              <div className="p-5">
                 <h3
-                  className="text-sm font-semibold mb-2 line-clamp-2 group-hover:text-[var(--plasma)] transition-colors duration-300"
-                  style={{ color: "var(--text-bright)" }}
+                  className="text-sm font-semibold mb-3 leading-snug group-hover:text-[var(--plasma)] transition-colors duration-300"
+                  style={{
+                    color: "var(--text-bright)",
+                    display: "-webkit-box",
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                  }}
                 >
                   {video.title}
                 </h3>
-                <div
-                  className="flex items-center gap-3 text-xs"
-                  style={{ color: "var(--text-dim)" }}
-                >
-                  <span className="flex items-center gap-1">
+                <div className="flex items-center gap-4 text-xs" style={{ color: "var(--text-dim)" }}>
+                  <span className="inline-flex items-center gap-1">
                     <Eye size={12} />
                     {video.views} views
                   </span>
-                  <span className="flex items-center gap-1">
+                  <span className="inline-flex items-center gap-1">
                     <Calendar size={12} />
                     {video.date}
                   </span>
@@ -204,18 +207,19 @@ export default function YouTube() {
         </div>
 
         {/* Subscribe CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-14">
           <a
             href="https://www.youtube.com/@programmingwithrishinalem"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            className="inline-flex items-center justify-center gap-2 rounded-full text-sm font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg whitespace-nowrap"
             style={{
               background: "#ff0000",
               color: "white",
+              padding: "14px 32px",
             }}
           >
-            <Play size={16} fill="white" />
+            <Play size={14} fill="white" />
             Subscribe to My Channel
           </a>
         </div>

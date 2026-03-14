@@ -1,69 +1,41 @@
 "use client";
 
-import { useEffect, useRef, useState, useMemo } from "react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
-import { useMagnetic } from "@/hooks/useMagnetic";
+import { useEffect, useRef, useMemo } from "react";
+import { gsap } from "@/lib/gsap";
 
 function NeuralNetwork() {
   const svgRef = useRef<SVGSVGElement>(null);
 
-  const nodes = useMemo(() => {
-    const result = [];
+  const { nodes, connections } = useMemo(() => {
+    const n = [];
     for (let i = 0; i < 40; i++) {
-      result.push({
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        delay: Math.random() * 3,
-      });
+      n.push({ x: Math.random() * 100, y: Math.random() * 100 });
     }
-    return result;
-  }, []);
-
-  const connections = useMemo(() => {
-    const result = [];
-    for (let i = 0; i < nodes.length; i++) {
-      for (let j = i + 1; j < nodes.length; j++) {
-        const dx = nodes[i].x - nodes[j].x;
-        const dy = nodes[i].y - nodes[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 25) {
-          result.push({ from: i, to: j, delay: Math.random() * 2 });
+    const c = [];
+    for (let i = 0; i < n.length; i++) {
+      for (let j = i + 1; j < n.length; j++) {
+        const dx = n[i].x - n[j].x;
+        const dy = n[i].y - n[j].y;
+        if (Math.sqrt(dx * dx + dy * dy) < 25) {
+          c.push({ from: i, to: j, delay: Math.random() * 2 });
         }
       }
     }
-    return result;
-  }, [nodes]);
+    return { nodes: n, connections: c };
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animate connection paths
       const paths = svgRef.current?.querySelectorAll(".neural-path");
       paths?.forEach((path, i) => {
-        const length = (path as SVGPathElement).getTotalLength?.() || 100;
+        const length = (path as SVGLineElement).getTotalLength?.() || 100;
         gsap.set(path, { strokeDasharray: length, strokeDashoffset: length });
         gsap.to(path, {
           strokeDashoffset: 0,
           duration: 1.5,
           delay: connections[i]?.delay || 0,
           ease: "power2.inOut",
-          scrollTrigger: {
-            trigger: svgRef.current,
-            start: "top 70%",
-          },
-        });
-      });
-
-      // Pulse nodes
-      const circles = svgRef.current?.querySelectorAll(".neural-node");
-      circles?.forEach((circle) => {
-        gsap.to(circle, {
-          scale: 1.5,
-          opacity: 0.8,
-          duration: 1,
-          repeat: -1,
-          yoyo: true,
-          delay: Math.random() * 3,
-          ease: "sine.inOut",
+          scrollTrigger: { trigger: svgRef.current, start: "top 70%" },
         });
       });
     });
@@ -73,33 +45,19 @@ function NeuralNetwork() {
   return (
     <svg
       ref={svgRef}
-      className="absolute inset-0 w-full h-full"
+      className="absolute inset-0 w-full h-full pointer-events-none"
       viewBox="0 0 100 100"
       preserveAspectRatio="none"
     >
       {connections.map((conn, i) => (
-        <line
-          key={i}
-          className="neural-path"
-          x1={nodes[conn.from].x}
-          y1={nodes[conn.from].y}
-          x2={nodes[conn.to].x}
-          y2={nodes[conn.to].y}
-          stroke="var(--plasma)"
-          strokeWidth="0.15"
-          opacity="0.2"
+        <line key={i} className="neural-path"
+          x1={nodes[conn.from].x} y1={nodes[conn.from].y}
+          x2={nodes[conn.to].x} y2={nodes[conn.to].y}
+          stroke="var(--plasma)" strokeWidth="0.15" opacity="0.15"
         />
       ))}
       {nodes.map((node, i) => (
-        <circle
-          key={i}
-          className="neural-node"
-          cx={node.x}
-          cy={node.y}
-          r="0.4"
-          fill="var(--plasma)"
-          opacity="0.3"
-        />
+        <circle key={i} cx={node.x} cy={node.y} r="0.4" fill="var(--plasma)" opacity="0.25" />
       ))}
     </svg>
   );
@@ -107,32 +65,25 @@ function NeuralNetwork() {
 
 export default function Nonprofit() {
   const sectionRef = useRef<HTMLElement>(null);
-  const btnRef = useMagnetic<HTMLAnchorElement>(0.3);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".nonprofit-headline span", {
+      gsap.from(".nonprofit-headline-line", {
         yPercent: 100,
         opacity: 0,
-        stagger: 0.1,
+        stagger: 0.12,
         duration: 0.8,
         ease: "expo.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 60%",
-        },
+        scrollTrigger: { trigger: sectionRef.current, start: "top 60%" },
       });
 
       gsap.from(".nonprofit-stat", {
         y: 30,
         opacity: 0,
-        stagger: 0.1,
+        stagger: 0.08,
         duration: 0.6,
         ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".nonprofit-stat",
-          start: "top 85%",
-        },
+        scrollTrigger: { trigger: ".nonprofit-stat", start: "top 85%" },
       });
     });
     return () => ctx.revert();
@@ -142,15 +93,15 @@ export default function Nonprofit() {
     <section
       id="nonprofit"
       ref={sectionRef}
-      className="relative section-padding overflow-hidden"
+      className="section-padding relative overflow-hidden"
       style={{ background: "var(--ink)" }}
     >
       <NeuralNetwork />
 
       <div className="container-wide relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="flex flex-col items-center text-center">
           <span
-            className="text-xs font-medium tracking-[0.3em] uppercase mb-6 block"
+            className="text-xs font-medium tracking-[0.3em] uppercase mb-8 block"
             style={{
               color: "var(--plasma)",
               fontFamily: "var(--font-jetbrains), monospace",
@@ -159,28 +110,29 @@ export default function Nonprofit() {
             Social Impact
           </span>
 
-          <h2 className="nonprofit-headline text-4xl md:text-6xl lg:text-8xl font-bold italic mb-8 leading-tight"
+          <h2
+            className="text-4xl md:text-6xl lg:text-7xl font-bold italic mb-10 leading-[1.15]"
             style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
           >
             <div className="overflow-hidden">
-              <span className="block" style={{ color: "var(--text-bright)" }}>
+              <span className="nonprofit-headline-line block" style={{ color: "var(--text-bright)" }}>
                 Making Education
               </span>
             </div>
             <div className="overflow-hidden">
-              <span className="block" style={{ color: "var(--text-bright)" }}>
+              <span className="nonprofit-headline-line block" style={{ color: "var(--text-bright)" }}>
                 Accessible to
               </span>
             </div>
             <div className="overflow-hidden">
-              <span className="block" style={{ color: "var(--plasma)" }}>
+              <span className="nonprofit-headline-line block" style={{ color: "var(--plasma)" }}>
                 Everyone.
               </span>
             </div>
           </h2>
 
           <p
-            className="text-base md:text-lg leading-relaxed mb-12 max-w-2xl mx-auto"
+            className="text-base md:text-lg leading-relaxed mb-14 max-w-2xl"
             style={{ color: "var(--text-mid)" }}
           >
             Nalem Study Circle is a nonprofit dedicated to providing AI-powered
@@ -189,7 +141,7 @@ export default function Nonprofit() {
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-14 w-full max-w-3xl">
             {[
               { value: "2,400+", label: "Students Served" },
               { value: "12", label: "Countries" },
@@ -198,7 +150,7 @@ export default function Nonprofit() {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="nonprofit-stat p-4 rounded-xl"
+                className="nonprofit-stat p-5 rounded-xl text-center"
                 style={{
                   background: "var(--shadow)",
                   border: "1px solid var(--border-faint)",
@@ -227,16 +179,16 @@ export default function Nonprofit() {
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4">
             <a
-              ref={btnRef}
               href="https://nalemstudycircle.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[var(--plasma-dim)]"
+              className="inline-flex items-center justify-center gap-2 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[rgba(0,255,148,0.15)]"
               style={{
                 background: "var(--plasma)",
                 color: "var(--ink)",
+                padding: "14px 32px",
               }}
             >
               Visit Nalem Study Circle
@@ -245,10 +197,11 @@ export default function Nonprofit() {
               href="https://blog.nalemstudycircle.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-medium transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium transition-colors duration-300 hover:border-[var(--border-glow)]"
               style={{
                 border: "1px solid var(--border-faint)",
                 color: "var(--text-mid)",
+                padding: "14px 32px",
               }}
             >
               Read Our Blog
