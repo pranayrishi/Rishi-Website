@@ -1,2468 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Rishi Nalem - Software Developer, Robotics Engineer & AI Innovator | Portfolio</title>
-    <meta name="description" content="Pranay Rishi Nalem - Expert Software Developer and Robotics Engineer specializing in AI, Machine Learning, and innovative technology solutions. Founder of Nalem Study Circle nonprofit.">
-    <meta name="keywords" content="Rishi Nalem, Software Developer, Robotics Engineer, AI, Machine Learning, Python, JavaScript, Flutter, Arduino, Raspberry Pi, Nalem Study Circle">
-    <meta name="author" content="Pranay Rishi Nalem">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://rishinalem.com">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Rishi Nalem - Software Developer & Robotics Engineer">
-    <meta property="og:description" content="Expert in AI, Machine Learning, and innovative technology solutions. Founder of Nalem Study Circle nonprofit.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rishinalem.com">
-    <meta property="og:image" content="https://rishinalem.com/images/og-image.jpg">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rishi Nalem - Software Developer & Robotics Engineer">
-    <meta name="twitter:description" content="Expert in AI, Machine Learning, and innovative technology solutions.">
-    <meta name="twitter:image" content="https://rishinalem.com/images/twitter-card.jpg">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Pranay Rishi Nalem",
-        "jobTitle": "Software Developer and Robotics Engineer",
-        "description": "Expert Software Developer and Robotics Engineer specializing in AI and Machine Learning",
-        "url": "https://rishinalem.com",
-        "sameAs": [
-            "https://www.linkedin.com/in/rishi-nalem-8161b7244/",
-            "https://github.com/pranayrishi",
-            "https://www.youtube.com/@programmingwithrishinalem",
-            "https://medium.com/@pranayrishi.nalem",
-            "https://www.reddit.com/r/PranayRishiNalem/",
-            "https://www.quora.com/profile/Rishi-Nalem"
-        ]
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rishi Nalem</title>
+<meta name="description" content="Rishi Nalem (Pranay Rishi Nalem) is a machine learning researcher and builder working on world models, masked diffusion, formal verification and physics-informed ML, and the founder of SattvaAI and Nalem Study Circle.">
+<meta name="author" content="Pranay Rishi Nalem">
+<link rel="canonical" href="https://rishinalem.com">
+<meta property="og:title" content="Rishi Nalem">
+<meta property="og:description" content="Research on world models, masked diffusion, formal verification and physics-informed ML. Founder of SattvaAI and Nalem Study Circle.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rishinalem.com">
+<meta property="og:image" content="https://rishinalem.com/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#E8EAEE">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231D2330'/%3E%3Cg fill='%23E8EAEE'%3E%3Ccircle cx='10' cy='10' r='2.4'/%3E%3Ccircle cx='16' cy='10' r='1.4'/%3E%3Ccircle cx='22' cy='10' r='1.4'/%3E%3Ccircle cx='10' cy='16' r='1.4'/%3E%3Ccircle cx='22' cy='16' r='1.4'/%3E%3Ccircle cx='10' cy='22' r='1.4'/%3E%3Ccircle cx='16' cy='22' r='1.4'/%3E%3C/g%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%235B6CFF'/%3E%3Ccircle cx='22' cy='22' r='2.4' fill='%235B6CFF'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Schibsted+Grotesk:wght@400..800&amp;display=swap">
+<script>
+  (function () {
+    var d = document.documentElement;
+    d.classList.add('js');
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      d.classList.add('intro');
+      setTimeout(function () { d.classList.remove('intro'); }, 3200);
     }
-    </script>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <!-- External Resources -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary-color: #667eea;
-            --secondary-color: #764ba2;
-            --accent-color: #f093fb;
-            --text-primary: #1a202c;
-            --text-secondary: #4a5568;
-            --text-light: #718096;
-            --background-primary: #ffffff;
-            --background-secondary: #f7fafc;
-            --background-accent: #edf2f7;
-            --border-color: #e2e8f0;
-            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            --gradient-accent: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
-            --border-radius: 12px;
-            --border-radius-lg: 20px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.7;
-            color: var(--text-primary);
-            background: var(--background-primary);
-            overflow-x: hidden;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--background-secondary);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-color);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--secondary-color);
-        }
-
-        /* Loading Animation */
-        .page-loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            opacity: 1;
-            transition: opacity 0.5s ease-out;
-        }
-
-        .page-loader.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loader-content {
-            text-align: center;
-            color: white;
-        }
-
-        .loader-spinner {
-            width: 50px;
-            height: 50px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top-color: white;
-            animation: spin 1s ease-in-out infinite;
-            margin: 0 auto 20px;
-        }
-
-        .loader-text {
-            font-size: 1.2rem;
-            font-weight: 600;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out 0.5s forwards;
-        }
-
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 1000;
-            padding: 0;
-            transition: var(--transition);
-        }
-
-        .navbar.scrolled {
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            height: 80px;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-primary);
-            font-weight: 500;
-            font-size: 0.95rem;
-            padding: 0.5rem 1rem;
-            border-radius: var(--border-radius);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: var(--gradient-primary);
-            transition: var(--transition);
-            transform: translateX(-50%);
-        }
-
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 80%;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-            background: rgba(102, 126, 234, 0.05);
-        }
-
-        .mobile-menu {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 0.5rem;
-            border-radius: var(--border-radius);
-            transition: var(--transition);
-        }
-
-        .mobile-menu:hover {
-            background: rgba(102, 126, 234, 0.1);
-        }
-
-        .mobile-menu span {
-            width: 25px;
-            height: 3px;
-            background: var(--text-primary);
-            margin: 3px 0;
-            transition: var(--transition);
-            border-radius: 2px;
-        }
-
-        /* Hero Section with Particles */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-            background: var(--gradient-primary);
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.02)" points="0,1000 1000,0 1000,1000"/></svg>');
-            animation: float 20s ease-in-out infinite;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            padding: 0 2rem;
-        }
-
-        .hero-subtitle {
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 0.2s forwards;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .hero-title {
-            font-size: clamp(3rem, 8vw, 5rem);
-            font-weight: 900;
-            margin-bottom: 1.5rem;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 0.4s forwards;
-            line-height: 1.1;
-        }
-
-        .hero-description {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 0.6s forwards;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 0.8s forwards;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            cursor: pointer;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
-        .btn-primary {
-            background: white;
-            color: var(--primary-color);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.8);
-        }
-
-        .btn-outline:hover {
-            background: white;
-            color: var(--primary-color);
-            border-color: white;
-        }
-
-        /* Scroll Indicator */
-        .scroll-indicator {
-            position: absolute;
-            bottom: 3rem;
-            left: 50%;
-            transform: translateX(-50%);
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9rem;
-            animation: bounce 2s infinite;
-        }
-
-        /* Main Content */
-        .main-content {
-            background: var(--background-primary);
-        }
-
-        .section {
-            padding: 6rem 0;
-            position: relative;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: var(--transition-slow);
-        }
-
-        .section-header.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .section-subtitle {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 1rem;
-        }
-
-        .section-title {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 800;
-            color: var(--text-primary);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .section-description {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
-
-        /* About Section */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
-
-        .about-content {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: var(--transition-slow);
-        }
-
-        .about-content.animate {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .about-text h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 1.5rem;
-            border-radius: var(--border-radius-lg);
-            background: var(--background-secondary);
-            transition: var(--transition);
-        }
-
-        .stat-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        .about-image {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: var(--transition-slow);
-            text-align: center;
-        }
-
-        .about-image.animate {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .about-image img {
-            width: 100%;
-            max-width: 400px;
-            height: 400px;
-            object-fit: cover;
-            border-radius: var(--border-radius-lg);
-            box-shadow: var(--shadow-xl);
-            transition: var(--transition);
-        }
-
-        .about-image img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-card {
-            background: var(--background-primary);
-            padding: 3rem 2rem;
-            border-radius: var(--border-radius-lg);
-            text-align: center;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .skill-card.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .skill-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 2rem;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            transition: var(--transition);
-        }
-
-        .skill-card:hover .skill-icon {
-            transform: scale(1.1);
-        }
-
-        .skill-card h4 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        .skill-card p {
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        /* Content Creation Section */
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .content-card {
-            background: var(--background-primary);
-            border-radius: var(--border-radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition);
-            border: 1px solid var(--border-color);
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .content-card.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .content-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .content-header {
-            padding: 2rem;
-            background: var(--gradient-primary);
-            color: white;
-            text-align: center;
-        }
-
-        .content-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .content-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .content-platform {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .content-body {
-            padding: 2rem;
-        }
-
-        .content-description {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .content-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .content-link:hover {
-            gap: 1rem;
-        }
-
-        /* Nonprofit Section */
-        .nonprofit-showcase {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 5rem 3rem;
-            border-radius: var(--border-radius-lg);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            opacity: 0;
-            transform: scale(0.95);
-            transition: var(--transition-slow);
-        }
-
-        .nonprofit-showcase.animate {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .nonprofit-showcase::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
-        }
-
-        .nonprofit-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .nonprofit-logo {
-            font-size: 5rem;
-            margin-bottom: 2rem;
-            display: block;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .nonprofit-title {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-        }
-
-        .nonprofit-description {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-            opacity: 0.95;
-            line-height: 1.7;
-        }
-
-        .nonprofit-cta {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .nonprofit-btn {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .nonprofit-btn:hover {
-            background: white;
-            color: var(--primary-color);
-            transform: translateY(-3px);
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .project-card {
-            background: var(--background-primary);
-            border-radius: var(--border-radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition);
-            border: 1px solid var(--border-color);
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .project-card.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .project-card:hover {
-            transform: translateY(-15px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .project-image {
-            height: 250px;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .project-card:hover .project-image::before {
-            left: 100%;
-        }
-
-        .project-content {
-            padding: 2.5rem;
-        }
-
-        .project-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-
-        .project-date {
-            color: var(--primary-color);
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-description {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .tech-tag {
-            background: rgba(102, 126, 234, 0.1);
-            color: var(--primary-color);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.8rem 1.5rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: var(--transition);
-        }
-
-        .project-link.github {
-            background: var(--text-primary);
-            color: white;
-        }
-
-        .project-link.github:hover {
-            background: var(--text-secondary);
-            transform: translateY(-2px);
-        }
-
-        .project-link.youtube {
-            background: #ff0000;
-            color: white;
-        }
-
-        .project-link.youtube:hover {
-            background: #cc0000;
-            transform: translateY(-2px);
-        }
-
-        .project-link.demo {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .project-link.demo:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-
-        /* YouTube Videos Section */
-        .youtube-section {
-            background: var(--background-primary);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .youtube-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.05) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .youtube-header {
-            text-align: center;
-            margin-bottom: 4rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .youtube-channel-info {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: var(--transition-slow);
-        }
-
-        .youtube-channel-info.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .youtube-logo {
-            width: 60px;
-            height: 60px;
-            background: #ff0000;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.8rem;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .youtube-channel-details h3 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 0.3rem;
-        }
-
-        .youtube-channel-details p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        .youtube-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .youtube-video-card {
-            background: var(--background-primary);
-            border-radius: var(--border-radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition);
-            border: 1px solid var(--border-color);
-            opacity: 0;
-            transform: translateY(30px);
-            cursor: pointer;
-        }
-
-        .youtube-video-card.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .youtube-video-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .youtube-thumbnail {
-            position: relative;
-            width: 100%;
-            height: 200px;
-            background: var(--background-accent);
-            overflow: hidden;
-        }
-
-        .youtube-thumbnail img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .youtube-video-card:hover .youtube-thumbnail img {
-            transform: scale(1.05);
-        }
-
-        .youtube-play-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 70px;
-            height: 70px;
-            background: rgba(255, 0, 0, 0.9);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.8rem;
-            transition: var(--transition);
-            backdrop-filter: blur(10px);
-        }
-
-        .youtube-video-card:hover .youtube-play-overlay {
-            background: rgba(255, 0, 0, 1);
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-
-        .youtube-duration {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 0.3rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .youtube-video-content {
-            padding: 1.5rem;
-        }
-
-        .youtube-video-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 0.8rem;
-            line-height: 1.4;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .youtube-video-meta {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        .youtube-video-views,
-        .youtube-video-date {
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        .youtube-video-description {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .youtube-cta {
-            text-align: center;
-            margin-top: 3rem;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: var(--transition-slow);
-        }
-
-        .youtube-cta.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .youtube-subscribe-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            background: #ff0000;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: var(--transition);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .youtube-subscribe-btn:hover {
-            background: #cc0000;
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .youtube-loading {
-            text-align: center;
-            padding: 3rem;
-            color: var(--text-secondary);
-        }
-
-        .youtube-loading-spinner {
-            width: 40px;
-            height: 40px;
-            border: 3px solid var(--border-color);
-            border-top-color: var(--primary-color);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 1rem;
-        }
-
-        .youtube-error {
-            text-align: center;
-            padding: 3rem;
-            color: var(--text-secondary);
-            background: var(--background-secondary);
-            border-radius: var(--border-radius-lg);
-            margin: 2rem 0;
-        }
-
-        .youtube-error i {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
-
-        .contact-content {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: var(--transition-slow);
-        }
-
-        .contact-content.animate {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .contact-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .contact-description {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 3rem;
-            line-height: 1.7;
-        }
-
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            opacity: 0;
-            transform: translateX(50px);
-            transition: var(--transition-slow);
-        }
-
-        .social-grid.animate {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .social-card {
-            background: var(--background-primary);
-            padding: 2rem;
-            border-radius: var(--border-radius-lg);
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-            text-align: center;
-        }
-
-        .social-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .social-icon {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 1rem;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            transition: var(--transition);
-        }
-
-        .social-card:hover .social-icon {
-            transform: scale(1.1);
-        }
-
-        .social-card h4 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-
-        .social-card p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .social-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .social-link:hover {
-            color: var(--secondary-color);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--text-primary);
-            color: white;
-            padding: 3rem 0 2rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .footer-logo {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-
-        .footer-text {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 2rem;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0) translateX(-50%);
-            }
-            40% {
-                transform: translateY(-10px) translateX(-50%);
-            }
-            60% {
-                transform: translateY(-5px) translateX(-50%);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .about-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-                text-align: center;
-            }
-
-            .about-content,
-            .contact-content {
-                transform: translateY(30px);
-            }
-
-            .about-content.animate,
-            .contact-content.animate {
-                transform: translateY(0);
-            }
-
-            .about-image,
-            .social-grid {
-                transform: translateY(30px);
-            }
-
-            .about-image.animate,
-            .social-grid.animate {
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu {
-                display: flex;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .youtube-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .youtube-channel-info {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .youtube-cta {
-                margin-top: 2rem;
-            }
-
-            .about-stats {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .nonprofit-showcase {
-                padding: 3rem 2rem;
-            }
-
-            .nonprofit-title {
-                font-size: 2rem;
-            }
-
-            .nonprofit-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .social-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .nav-container {
-                padding: 1rem;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-
-            .section {
-                padding: 4rem 0;
-            }
-
-            .hero-description {
-                font-size: 1.1rem;
-            }
-
-            .btn {
-                padding: 0.8rem 1.5rem;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+  })();
+</script>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-    <!-- Page Loader -->
-    <div class="page-loader" id="pageLoader">
-        <div class="loader-content">
-            <div class="loader-spinner"></div>
-            <div class="loader-text">Loading Excellence...</div>
-        </div>
-    </div>
+<a class="skip" href="#research">Skip to research</a>
+<canvas id="field" aria-hidden="true"></canvas>
+<canvas id="probe" aria-hidden="true"></canvas>
+<img class="peek" id="peek" alt="" aria-hidden="true">
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">Rishi Nalem</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#nonprofit" class="nav-link">Nonprofit</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#youtube" class="nav-link">YouTube</a></li>
-                <li><a href="#content" class="nav-link">Content</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="mobile-menu" id="mobileMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-name" href="#top">Rishi Nalem</a>
+    <div class="nav-right">
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#research" data-target="research">Research</a>
+        <a href="#building" data-target="building">Building</a>
+        <a href="#projects" data-target="projects">Projects</a>
+        <a href="#honors" data-target="honors">Honors</a>
+        <a href="#path" data-target="path">Path</a>
+        <a href="#contact" data-target="contact">Contact</a>
+        <span class="nav-mark" aria-hidden="true"></span>
+      </nav>
+      <button type="button" class="search-btn" id="open-cmdk" aria-haspopup="dialog"><span class="desk">Search</span><span class="mob">Menu</span><kbd id="kbd-hint">⌘K</kbd></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="top" data-nav="top">
+    <div class="hero-intro">
+      <img class="portrait" src="assets/img/portrait.webp" width="576" height="576" alt="Portrait of Rishi Nalem">
+      <p class="hero-lede">Machine learning researcher and builder. I study what finetuning changes inside a model, how agents can imagine a screen before they act, and how to check the work AI produces, then I ship what I learn.</p>
+    </div>
+    <h1 class="hero-name" id="name" aria-label="Rishi Nalem"><span class="line">Rishi</span><span class="line">Nalem</span></h1>
+    <div class="hero-foot">
+      <p>Pranay Rishi Nalem, Mountain House, California. Research with Yale, UC San Diego, Notre Dame, CU Boulder, George Washington University and Capital One.</p>
+      <p class="hint" id="hint">Scroll to apply a task matrix <i>T</i> to the points on this page.</p>
+    </div>
+  </section>
+
+  <!-- ================= RESEARCH ================= -->
+  <section class="section research-intro wrap" id="research" data-nav="research">
+    <h2 class="mask-h">Research</h2>
+    <p class="lead">Ten projects since 2023, across machine learning, formal methods, physics and aerospace. Three questions keep pulling me back: what actually changes inside a model when you finetune it, whether an agent can imagine the next screen before it clicks, and how we check what AI produces.</p>
+    <ol class="figlist">
+      <li><a href="#task-matrices"><span class="n">Fig. 1</span><span>Task matrices</span></a></li>
+      <li><a href="#futures"><span class="n">Fig. 2–3</span><span>World models for computer-use agents</span></a></li>
+      <li><a href="#masked-diffusion"><span class="n">Fig. 4</span><span>Masked diffusion models</span></a></li>
+      <li><a href="#glance"><span class="n">Fig. 5–11</span><span>Formal verification, CubeSats, biophysics, magnons, 2D materials, spintronics</span></a></li>
+      <li><a href="#papers"><span class="n">Papers</span><span>Two accepted, four in preparation or reported</span></a></li>
+      <li><a href="#cats"><span class="n">Fig. 12</span><span>For fun: on the active rheology of cats</span></a></li>
+    </ol>
+  </section>
+
+  <section class="pin-scene" id="task-matrices" data-nav="research" aria-labelledby="fig1-title">
+    <div class="pin-inner">
+      <div class="pin-text">
+        <p class="fig-tag">Fig. 1</p>
+        <h3 id="fig1-title">A finetuned model is often one matrix away from its base</h3>
+        <ol class="steps" id="steps1">
+          <li class="step is-active"><span class="step-k">Base</span>Each point is an embedding from a pretrained model. The classes are already in there, tangled together.</li>
+          <li class="step"><span class="step-k">Apply <i>T</i></span>A task matrix is a single linear map, fit from data, that carries base embeddings toward their finetuned positions.</li>
+          <li class="step"><span class="step-k">Result</span>Across CLIP, DEiT, DINOv3, allMiniLM and RoBERTa on 15 vision and language benchmarks, a base model plus a task matrix outperformed linear probes and on some approached full finetuning.</li>
+        </ol>
+        <p class="eq"><i>h</i><sub>ft</sub> ≈ <i>T h</i><sub>base</sub></p>
+        <div class="cite">
+          <p class="cite" style="margin:0">Co-author. Poster at the NeurIPS 2025 UniReps Workshop, San Diego, from research at Algoverse AI Research.</p>
+          <div class="cite-actions"><a href="https://openreview.net/forum?id=wCm3TFLNwr">Read on OpenReview</a></div>
         </div>
+      </div>
+      <figure class="pin-figure">
+        <div class="matrix" aria-label="Task matrix T, interpolated from the identity as you scroll">
+          <span class="matrix-name"><i>T</i> =</span>
+          <div class="matrix-grid" id="matrix"></div>
+        </div>
+        <figcaption><b>Fig. 1.</b> Synthetic embeddings drawn for illustration. The matrix shown is the one being applied to them as you scroll.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="wrap cite-mobile" style="padding-top:28px">
+    <p class="cite">Co-author. Poster at the NeurIPS 2025 UniReps Workshop, San Diego, from research at Algoverse AI Research.</p>
+    <div class="cite-actions"><a href="https://openreview.net/forum?id=wCm3TFLNwr">Read on OpenReview</a></div>
+  </div>
+
+  <section class="pin-scene" id="futures" data-nav="research" aria-labelledby="fig2-title">
+    <div class="pin-inner">
+      <div class="pin-text">
+        <p class="fig-tag">Fig. 2</p>
+        <h3 id="fig2-title">Agents that imagine the next screen before they click</h3>
+        <ol class="steps" id="steps2">
+          <li class="step is-active"><span class="step-k">Imagine</span>From the current screen, a world model predicts what each possible action leads to, then what follows from that.</li>
+          <li class="step"><span class="step-k">Single-step training</span>Taught to predict one step at a time, its imagined futures blur after about four steps.</li>
+          <li class="step"><span class="step-k">Multi-step objective</span>Trained on whole rollouts, the same futures stay usable for about eight steps, with 35% less rollout error.</li>
+        </ol>
+        <p class="small" style="margin:0">Research assistant, George Washington University, April to September 2026.</p>
+      </div>
+      <figure class="pin-figure">
+        <div class="legend"><span><i></i>Usable prediction</span><span><i class="drift"></i>Drifting</span></div>
+        <figcaption><b>Fig. 2.</b> Each strand is one imagined future, flowing left to right through eight steps. An illustration of the reported horizons.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section wrap" id="world-models" data-nav="research" aria-labelledby="fig3-title" style="padding-top:clamp(72px,8vw,128px)">
+    <div class="fig-grid">
+      <div class="fig-text">
+        <p class="fig-tag">Fig. 3</p>
+        <h3 id="fig3-title">Two world models for computer-use agents</h3>
+        <p>Computer-use agents mostly learn by trial and error, which is slow and sometimes destructive. A world model lets an agent rehearse a plan inside its own prediction first. Two manuscripts from this work are in preparation, tentatively for ICLR 2027.</p>
+        <ul class="papers">
+          <li><b>A latent world model</b> that trains perception, dynamics and value in three separate phases: a LoRA-tuned vision encoder, an action-conditioned diffusion transformer, and a goal-grounded value head.</li>
+          <li><b>A text-space world model</b> on the 7B UI-TARS-1.5 backbone that represents each screen as entity-centric, ID-referenced changes to the previous one.</li>
+          <li><b>A diagnosis:</b> reconstruction objectives are misaligned with predictability in latent encoders. Capacity sweeps and overfit probes localized the generalization bottleneck.</li>
+        </ul>
+        <table class="results">
+          <caption>Reported results</caption>
+          <tbody>
+            <tr><th scope="row">Multi-step latent prediction on AgentNet-Ubuntu</th><td>+0.203, new best</td></tr>
+            <tr><th scope="row">Goal-grounding accuracy</th><td>94%</td></tr>
+            <tr><th scope="row">Usable imagination horizon</th><td>~4 → ~8 steps</td></tr>
+            <tr><th scope="row">Rollout error</th><td>35% lower</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figure class="plate">
+        <div class="seg" role="radiogroup" aria-label="Training objective">
+          <button type="button" role="radio" id="obj-single" aria-checked="true">Single-step training</button>
+          <button type="button" role="radio" id="obj-multi" aria-checked="false">Multi-step objective</button>
+        </div>
+        <div class="frames" id="frames"></div>
+        <figcaption><b>Fig. 3.</b> One observed screen and eight imagined ones for a save-as task: open the menu, choose Export, name the file, save. Past the usable horizon, predictions drift. An illustration, not model output.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section wrap" id="masked-diffusion" data-nav="research" aria-labelledby="fig4-title" style="padding-top:0">
+    <div class="fig-grid">
+      <div class="fig-text">
+        <p class="fig-tag">Fig. 4</p>
+        <h3 id="fig4-title">Language models that don’t have to write left to right</h3>
+        <p>Masked diffusion models can fill in tokens in any order, so they can leave a hard word for later, once the words around it make it easy. That freedom has a price: the model must learn exponentially many fill-in-the-blank problems compared with an autoregressive model.</p>
+        <p>At Yale, in the Department of Applied Physics, I worked on cutting the training-time cost of adaptive masked diffusion models while keeping their flexible, order-agnostic decoding.</p>
+        <p class="small">Research assistant, Yale University, January to July 2026. Extends an ICML 2025 Outstanding Paper on adaptive masked diffusion.</p>
+      </div>
+      <figure class="plate" id="decoder">
+        <div class="sentence-row">
+          <label for="sentence">Try your own sentence</label>
+          <input class="field" id="sentence" maxlength="90" autocomplete="off" spellcheck="false" value="the agent predicts the next screen before it clicks">
+        </div>
+        <div class="chips" id="chips">
+          <button type="button" class="chip">the agent predicts the next screen before it clicks</button>
+          <button type="button" class="chip">a model can leave the hardest word for last</button>
+          <button type="button" class="chip">good research starts with a strange question</button>
+        </div>
+        <div class="tokens" id="tokens" aria-hidden="true"></div>
+        <div class="decoder-controls">
+          <button type="button" class="btn" id="dec-ltr">Decode left to right</button>
+          <button type="button" class="btn" id="dec-adapt">Decode easiest first</button>
+        </div>
+        <dl class="readout" id="readout" aria-live="polite">
+          <div data-mode="ltr"><dt>Left to right</dt><dd>Average confidence <span id="ltr-mean">–</span>. Least sure guess <span id="ltr-min">–</span>.</dd></div>
+          <div data-mode="adapt" class="is-current"><dt>Easiest first</dt><dd>Average confidence <span id="adapt-mean">–</span>. Least sure guess <span id="adapt-min">–</span>.</dd></div>
+        </dl>
+        <figcaption><b>Fig. 4.</b> A toy decoder: common words start confident, long rare ones don’t, and every revealed neighbour helps. Small numbers mark the step each word was revealed. The name at the top of this page was revealed the same way, with English letter frequencies as confidence.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- At a glance -->
+  <section class="section wrap" id="glance" data-nav="research" style="padding-top:0">
+    <div class="glance-head">
+      <h3>All ten projects, by date</h3>
+      <p class="small">Select a project to jump to its figure.</p>
+    </div>
+    <div class="gantt-wrap"><div class="gantt" id="gantt" role="list"></div></div>
+    <ul class="gantt-legend" id="gantt-legend" aria-label="Fields"></ul>
+  </section>
+
+  <!-- More research: the particle field takes each figure's shape -->
+  <section class="wrap chapters" data-nav="research" aria-label="More research">
+    <article class="chapter" id="formal">
+      <div class="chapter-text">
+        <p class="fig-tag">Fig. 5</p>
+        <h3>Teaching language models to prove things a computer can check</h3>
+        <p class="meta">Research lead. Industry–academic collaboration with Capital One. Fall 2026 to now.</p>
+        <p>As a high school senior, I lead a collaboration that benchmarks formal-proof verifiers for AI-generated mathematics. I’m measuring where Lean 4’s verification cost comes from relative to an LLM’s forward passes, and testing whether domain-specific verifiers for structured problems, such as information-theory theorems, can cut that cost while keeping formal guarantees.</p>
+        <p>Alongside that, I’m building a generate, verify, iterate loop that uses Lean and other verifiers to search for proofs in information theory, starting from simple theorems and scaling difficulty.</p>
+      </div>
+      <figure class="chapter-fig">
+        <div class="stage" data-shape="proof" role="img" aria-label="Proof steps stream in from the left; at the Lean check, rejected steps fall away and accepted ones assemble into the end-of-proof square.">
+          <span class="st-label" style="left:2%;top:4%">Model proposes steps</span>
+          <span class="st-label c" style="left:55%;top:2%">Lean checks each one</span>
+          <span class="st-label c ink" style="left:80%;top:68%">Proof checked ∎</span>
+          <span class="st-label c dim" style="left:62%;top:92%">Rejected</span>
+        </div>
+        <figcaption><b>Fig. 5.</b> Generate, verify, iterate. Steps that fail the check fall away; the ones that pass assemble into ∎, the end-of-proof mark. An illustration.</figcaption>
+      </figure>
+    </article>
+
+    <article class="chapter flip" id="cubesat">
+      <div class="chapter-text">
+        <p class="fig-tag">Fig. 6</p>
+        <h3>Holding CubeSats in formation without fuel</h3>
+        <p class="meta">First author, five-student team. February to May 2026. Accepted poster, 2026 AAS/AIAA Astrodynamics Specialist Conference (AAS 26-1032).</p>
+        <p>We tested a propellant-free, differential-drag method for CubeSat formation control. Auditing the relative-motion code, I found Schweighart–Sedwick coefficients that failed to recover Clohessy–Wiltshire dynamics as J2 goes to zero. Stroboscopic return maps and largest-Lyapunov estimates across 75 period–duty regimes then drove a new invariant-map controller.</p>
+        <div class="bars" id="rms-bars"></div>
+        <p class="small">With p = 0.289 over eight paired one-day simulations, we framed the controller result as a reproducible test, not a superiority claim. <a href="https://doi.org/10.5281/zenodo.23369472">Read the paper (DOI)</a></p>
+      </div>
+      <figure class="chapter-fig">
+        <div class="fig6" id="fig6">
+          <canvas aria-label="Earth with two CubeSats flying in formation. Scroll to zoom in on the pair."></canvas>
+          <span class="f6-tag" data-tag="leader">Leader</span><span class="f6-tag f" data-tag="follower">Follower</span>
+          <div class="f6-panel">
+            <p class="f6-k">Follower, seen from the leader</p>
+            <svg viewBox="0 0 220 120" class="f6-inset" aria-hidden="true">
+              <path d="M10 60 H210 M110 8 V112" stroke="rgba(143,160,216,.35)" stroke-width="1"/>
+              <text x="200" y="74" text-anchor="end">along-track</text><text x="116" y="16">radial</text>
+              <ellipse cx="110" cy="60" rx="56" ry="28" fill="none" stroke="rgba(200,210,255,.38)" stroke-width="1" stroke-dasharray="3 4"/>
+              <text x="170" y="34" class="f6-goal">target loop</text>
+              <rect x="106" y="56" width="8" height="8" fill="#C8D2FF"/>
+              <polyline class="f6-trail" fill="none" stroke="#16A3A8" stroke-width="1.6" points=""/>
+              <circle class="f6-dot" r="4" fill="#3FD0D5"/>
+            </svg>
+          </div>
+          <div class="f6-controls">
+            <div class="seg dark" role="radiogroup" aria-label="Drag control">
+              <button type="button" role="radio" data-ctl="on" aria-checked="true">Drag control on</button>
+              <button type="button" role="radio" data-ctl="off" aria-checked="false">Off</button>
+            </div>
+            <p class="f6-status" aria-live="polite">Drag control on: holding formation</p>
+          </div>
+          <p class="f6-fallback">This figure needs WebGL. The chart beside it has the results.</p>
+        </div>
+        <figcaption><b>Fig. 6.</b> Scroll to fly down to the pair. With drag control on, the follower traces a closed loop around the leader; off, it drifts away along its orbit. An illustration, scaled up so the motion is visible.</figcaption>
+      </figure>
+    </article>
+
+    <article class="chapter" id="biophysics">
+      <div class="chapter-text">
+        <p class="fig-tag">Fig. 7</p>
+        <h3>Can proteins sense weak radio waves?</h3>
+        <p class="meta">Student researcher on a seven-person team. University of Colorado Boulder. July to August 2026.</p>
+        <p>Weak radio-frequency fields (20 nT, 2–5 MHz) shift oxidative-stress responses in HT-1080 fibrosarcoma cells. To test the radical-pair hypothesis at the FAD cofactor, I modeled flavoproteins as graphs, residues as nodes and atomic contacts as edges. I owned the lab’s 4 MHz track end to end and completed the final 16.5 Hz analysis: a structural noise spectrum <i>J</i>(ω), a 75-setting sensitivity sweep and Laplacian eigenmodes for four proteins.</p>
+        <div class="mini-stats three">
+          <div><b>12 of 326</b><span>interior residues measurably affected the FAD site</span></div>
+          <div><b>75 of 75</b><span>settings where fruit-fly cryptochrome had the most isolated FAD site</span></div>
+          <div><b>70 of 75</b><span>settings where the two cryptochromes ranked top two</span></div>
+        </div>
+        <p class="small">Protein structure alone could not explain why responses flip between frequencies, so I reported model-dependent results separately.</p>
+      </div>
+      <figure class="chapter-fig">
+        <ol class="f7-steps" id="fig7-steps">
+          <li class="is-active">A weak radio wave reaches a cell</li>
+          <li>Inside, a flavoprotein holds an FAD cofactor</li>
+          <li>Only 12 of its 326 interior residues shield that site</li>
+        </ol>
+        <svg class="fig7" id="fig7" viewBox="0 0 640 480" role="img" aria-label="A radio wave reaches a cell; the view zooms into a flavoprotein, where 12 of 326 residues around the FAD cofactor light up."></svg>
+        <figcaption><b>Fig. 7.</b> Scroll to zoom from the cell to the protein’s FAD pocket. The ribbon is drawn for illustration, not a real structure.</figcaption>
+      </figure>
+    </article>
+
+    <article class="chapter flip" id="magnons">
+      <div class="chapter-text">
+        <p class="fig-tag">Fig. 8</p>
+        <h3>Reading wave equations off a magnet</h3>
+        <p class="meta">Research assistant, Department of Physics, UC San Diego. January to July 2026.</p>
+        <p>Remote research on magnon dynamics in CrSBr, a layered 2D antiferromagnet whose properties differ from conventional ferromagnets such as CoFeB and NiFe. I built physics-informed machine learning that classifies magnon propagation patterns and extracts governing wave equations from optical-imaging video, combining convolutional feature extraction with physics constraints.</p>
+      </div>
+      <figure class="chapter-fig">
+        <div class="fig8-wrap">
+          <canvas class="fig8" id="fig8" aria-label="Two layers of spins in a magnet. Tap to launch a spin wave."></canvas>
+          <span class="fig8-hint" id="fig8-hint">Tap the magnet to launch a spin wave</span>
+        </div>
+        <div class="fig8-read">
+          <canvas id="fig8-fit" aria-hidden="true"></canvas>
+          <div>
+            <p class="f8-k">What the model reads off the video</p>
+            <p class="f8-v">Wave front speed <b><span id="fig8-v">–</span> sites per second</b>, fitted from the points on the left.</p>
+            <p class="f8-eq">∂²<i>m</i>/∂<i>t</i>² = <i>v</i>² ∇²<i>m</i> − γ ∂<i>m</i>/∂<i>t</i></p>
+            <p class="f8-v small-print">A damped wave equation, the kind of law the model recovers from imaging data.</p>
+          </div>
+        </div>
+        <figcaption><b>Fig. 8.</b> A toy magnet: two layers whose spins point opposite ways. A tap tips the spins, the disturbance spreads as a spin wave, and fitting its front recovers the wave speed.</figcaption>
+      </figure>
+    </article>
+
+    <article class="chapter" id="monoscan">
+      <div class="chapter-text">
+        <p class="fig-tag">Fig. 9</p>
+        <h3>MonoScan: finding one-atom-thick crystals</h3>
+        <p class="meta">Research assistant, Department of Physics and Astronomy, University of Notre Dame. January to April 2026.</p>
+        <p>I developed MonoScan, a computer-vision tool that identifies and classifies WSe₂ monolayers in optical microscopy images. It is in active use in the lab’s nanofabrication pipeline. CNNs trained on annotated substrate images find single-layer regions suitable for van der Waals heterostructure devices, and I analyzed monolayer domain structure and morphology.</p>
+      </div>
+      <figure class="chapter-fig">
+        <div class="fig9-wrap">
+          <canvas class="fig9" id="fig9" aria-label="Microscope view of flakes on a substrate. Drag to explore; MonoScan boxes the monolayers."></canvas>
+          <span class="fig9-hint" id="fig9-hint">Drag to move the sample</span>
+        </div>
+        <p class="fig9-count">Monolayers found <b><span id="fig9-found">0</span> of <span id="fig9-total">0</span></b></p>
+        <figcaption><b>Fig. 9.</b> A synthetic sample of WSe₂ flakes on silicon oxide. Thicker flakes look bluer, then green and gold; one-atom-thick monolayers are faint, which is why a model helps find them.</figcaption>
+      </figure>
+    </article>
+
+    <article class="chapter flip" id="reservoir">
+      <div class="chapter-text">
+        <p class="fig-tag">Fig. 10</p>
+        <h3>Computing with magnetic noise</h3>
+        <p class="meta">Lead researcher, independent. July 2025 to March 2026. First place, county science fair; second place, school.</p>
+        <p>I benchmarked spin-torque nano-oscillator arrays, skyrmion memristors and vortex magnetic tunnel junctions as physical reservoir computers across 500+ OOMMF micromagnetic simulations, sweeping Gilbert damping, anisotropy and coupling. Memory capacity and error on NARMA-10 and Mackey-Glass came with bootstrap confidence intervals and hypothesis tests over 11 simulation versions, failures documented as carefully as successes. It is becoming SpinRC-Bench, a benchmarking framework now in preparation.</p>
+      </div>
+      <figure class="chapter-fig">
+        <canvas class="fig10" id="fig10" aria-label="A Mackey-Glass signal feeds a network of 16 oscillators; a trained readout predicts the next value."></canvas>
+        <p class="fig10-err">Live prediction error, normalized <b id="fig10-err">–</b></p>
+        <figcaption><b>Fig. 10.</b> A real 16-node echo state network running in your browser, trained to predict the next value of the chaotic Mackey-Glass series. My research swaps these simulated nodes for spintronic devices.</figcaption>
+      </figure>
+    </article>
+
+    <article class="chapter" id="asdrp">
+      <div class="chapter-text">
+        <p class="fig-tag">Fig. 11</p>
+        <h3>Where it started: LLM safety, self-driving simulations and drones</h3>
+        <p class="meta">Engineering research scholar, Aspiring Scholars Directed Research Program. May 2023 to 2025.</p>
+        <p>Three projects over two years: reducing hallucination, bias and toxicity in LLMs, with a side exploration of AR molecular modeling; ROS 2 autonomous-car simulations using self-organizing maps, in C++ and Python; and leading a team that built Raspberry Pi drones with ML obstacle avoidance for tree-health surveys.</p>
+        <div class="bars" id="asdrp-bars"></div>
+      </div>
+      <figure class="chapter-fig">
+        <canvas class="fig11" id="fig11" aria-label="Top-down view of an orchard; three drones fly survey lanes, steer around poles, and reveal each tree's health."></canvas>
+        <ul class="fig11-key"><li>Surveyed <b id="fig11-n">0</b> of 50</li><li><i style="background:#3FA56B"></i>Healthy <b id="fig11-h">0</b></li><li><i style="background:#E2B340"></i>Stressed <b id="fig11-s">0</b></li><li><i style="background:#D9594C"></i>Needs care <b id="fig11-x">0</b></li></ul>
+        <figcaption><b>Fig. 11.</b> Drones fly lanes over an orchard, steering around poles, and each tree’s health appears as they pass. An illustration of the tree-health survey project.</figcaption>
+      </figure>
+    </article>
+  </section>
+
+  <!-- Papers -->
+  <section class="section wrap" id="papers" data-nav="research" style="padding-top:clamp(40px,5vw,80px)">
+    <h3 class="papers-title">Papers and reports</h3>
+    <ol class="pubs">
+      <li>
+        <span class="pub-n">1</span>
+        <div>
+          <p class="pub-t">Testing Chaos-Assisted Passive Reconfiguration: Relative-Motion Validation, Invariant Maps, and Fair Differential-Drag Comparison</p>
+          <p class="pub-v">2026 AAS/AIAA Astrodynamics Specialist Conference, Whistler, BC. Paper AAS 26-1032. <a href="https://doi.org/10.5281/zenodo.23369472">DOI</a></p>
+        </div>
+        <div class="pub-tags"><span class="tag">First author</span><span class="tag ok">Accepted poster</span></div>
+      </li>
+      <li>
+        <span class="pub-n">2</span>
+        <div>
+          <p class="pub-t">Task Matrices: Linear Maps for Cross-Model Finetuning Transfer across Modalities</p>
+          <p class="pub-v">NeurIPS 2025 Workshop on Unifying Representations in Neural Models (UniReps), San Diego. <a href="https://openreview.net/forum?id=wCm3TFLNwr">OpenReview</a></p>
+        </div>
+        <div class="pub-tags"><span class="tag">Co-author</span><span class="tag ok">Accepted poster</span></div>
+      </li>
+      <li>
+        <span class="pub-n">3</span>
+        <div>
+          <p class="pub-t">Structural Noise Screening at 16.5 Hz</p>
+          <p class="pub-v">Research group report, University of Colorado Boulder, August 2026.</p>
+        </div>
+        <div class="pub-tags"><span class="tag">Author</span><span class="tag">Technical report</span></div>
+      </li>
+      <li>
+        <span class="pub-n">4</span>
+        <div>
+          <p class="pub-t">4 MHz track final report: protein spectral-density screening, with literature and protein extensions</p>
+          <p class="pub-v">Research group report, University of Colorado Boulder, July 2026.</p>
+        </div>
+        <div class="pub-tags"><span class="tag">Author</span><span class="tag">Technical report</span></div>
+      </li>
+      <li>
+        <span class="pub-n">5</span>
+        <div>
+          <p class="pub-t">Two manuscripts on world models for computer-use agents, latent and text-space</p>
+          <p class="pub-v">George Washington University. Tentatively for ICLR 2027.</p>
+        </div>
+        <div class="pub-tags"><span class="tag wip">In preparation</span></div>
+      </li>
+      <li>
+        <span class="pub-n">6</span>
+        <div>
+          <p class="pub-t">SpinRC-Bench: A Multi-Architecture Computational Framework for Benchmarking Spintronic Reservoir Computing</p>
+          <p class="pub-v">Independent research.</p>
+        </div>
+        <div class="pub-tags"><span class="tag">Author</span><span class="tag wip">In preparation</span></div>
+      </li>
+      <li>
+        <span class="pub-n">7</span>
+        <div>
+          <p class="pub-t">On the Active Rheology of Cats: The Active Oldroyd–Felidae Constitutive Equation and a Theory of Spontaneous Egress</p>
+          <p class="pub-v">A mathematical satire, July 2026. <a href="assets/papers/active-rheology-of-cats.pdf">PDF</a>, or play with it below.</p>
+        </div>
+        <div class="pub-tags"><span class="tag">Author</span><span class="tag fun">Written for fun</span></div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- For fun -->
+  <section class="section wrap" id="cats" data-nav="research" style="padding-top:clamp(24px,3vw,48px)">
+    <div class="fig-grid">
+      <div class="fig-text">
+        <p class="fig-tag">Fig. 12</p>
+        <h3>On the active rheology of cats</h3>
+        <p class="meta">Written for fun in July 2026. Not submitted anywhere.</p>
+        <p>The Deborah number, De = λ/T, famously decides whether a cat is a liquid: if its relaxation time λ is short next to how long you watch it, T, it flows into whatever sink it sits in. But De can’t explain why a perfectly settled cat suddenly leaves.</p>
+        <p>My paper adds what’s missing: a metabolic activity field that switches on at random, active stress that pushes against the sink, and an escape number, Fe, the active work available over the sink’s barrier. Leaving the sink becomes noisy barrier crossing with memory, which gives a closed-form law for how long a cat stays. No animal experiment is proposed or required.</p>
+        <div class="cite-actions"><a href="assets/papers/active-rheology-of-cats.pdf">Read the paper (PDF)</a></div>
+      </div>
+      <figure class="plate cat-plate">
+        <canvas class="viz" id="cat" aria-label="A cat in a sink. Its shape and whether it leaves depend on the point chosen on the state diagram."></canvas>
+        <div class="cat-controls">
+          <div class="pad-wrap">
+            <div class="pad" id="cat-pad" role="slider" tabindex="0" aria-label="State diagram: Deborah number across, escape number up. Use arrow keys to move." aria-valuetext="">
+              <span class="q q1">Shape-adapted, able to exit</span><span class="q q2">Elastic launch</span><span class="q q3">Shape-adapted, resident</span><span class="q q4">Solid-like quiescence</span>
+              <span class="knob" aria-hidden="true"></span>
+            </div>
+            <div class="pad-x"><span>De = 0.1</span><span>De = 1</span><span>10</span></div>
+            <span class="pad-y">Fe</span>
+          </div>
+          <div class="cat-read">
+            <dl>
+              <div><dt>Deborah number, De</dt><dd id="cat-de">0.30</dd></div>
+              <div><dt>Escape number, Fe</dt><dd id="cat-fe">2.20</dd></div>
+              <div><dt>Regime</dt><dd id="cat-regime">Shape-adapted, able to exit</dd></div>
+              <div><dt>Exits so far</dt><dd id="cat-exits">0</dd></div>
+            </dl>
+            <button type="button" class="btn" id="cat-startle">Startle the cat</button>
+          </div>
+        </div>
+        <figcaption><b>Fig. 12.</b> Drag the point across the paper’s state diagram. Low De and the cat takes the shape of the sink; high Fe and it leaves, flowing out if it’s liquid-like or launching if it’s solid-like. Startle adds a burst of activity, which only works if there’s enough escape number to spend. Click the cat to pet it.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= BUILDING ================= -->
+  <section class="section wrap" id="building" data-nav="building" style="padding-top:clamp(56px,7vw,120px)">
+    <h2 class="mask-h">Building</h2>
+    <p class="lead">Two things I run outside the lab: an agent people can use today, and a learning platform for students who need a path, not more links.</p>
+    <article class="venture" style="margin-top:clamp(40px,5vw,72px)">
+      <div>
+        <h3>SattvaAI</h3>
+        <p class="tagline">Your AI. Any app. Zero setup.</p>
+        <p>A private AI agent that operates the apps on your computer. Describe a task in plain language, typed or spoken, and SattvaAI carries out the steps on screen across browsers, office tools and creative software. Everything runs on your own machine, with no accounts, API keys or cloud.</p>
+        <p>It’s the applied side of my world-model research: an agent has to understand a screen before it can act on one safely.</p>
+        <ul class="facts"><li>Free</li><li>macOS now, Windows coming</li><li>Works offline</li></ul>
+        <div class="venture-links"><a class="btn primary" href="https://sattva-ai-website.vercel.app/">Visit SattvaAI</a></div>
+      </div>
+      <figure class="plate agent-demo" id="agent-demo">
+        <div class="cmdbar"><span class="orb" aria-hidden="true"></span><span><span id="agent-typed">Book a table for Friday at 7 and add it to my calendar</span><span class="caret" aria-hidden="true"></span></span></div>
+        <ol class="agent-steps" id="agent-steps">
+          <li data-state="done"><span class="app">Safari</span><span>Open the restaurant’s booking page</span><span class="st"><svg viewBox="0 0 10 10" fill="none" stroke="#fff" stroke-width="1.8" aria-hidden="true"><path d="M2 5.2l2 2L8 3"/></svg></span></li>
+          <li data-state="done"><span class="app">Safari</span><span>Choose Friday at 7:00 pm and confirm</span><span class="st"><svg viewBox="0 0 10 10" fill="none" stroke="#fff" stroke-width="1.8" aria-hidden="true"><path d="M2 5.2l2 2L8 3"/></svg></span></li>
+          <li data-state="done"><span class="app">Calendar</span><span>Add “Dinner” on Friday at 7:00 pm</span><span class="st"><svg viewBox="0 0 10 10" fill="none" stroke="#fff" stroke-width="1.8" aria-hidden="true"><path d="M2 5.2l2 2L8 3"/></svg></span></li>
+          <li data-state="done"><span class="app">SattvaAI</span><span>Done, without anything leaving this Mac</span><span class="st"><svg viewBox="0 0 10 10" fill="none" stroke="#fff" stroke-width="1.8" aria-hidden="true"><path d="M2 5.2l2 2L8 3"/></svg></span></li>
+        </ol>
+        <div class="demo-foot">
+          <figcaption>An illustration of how one request becomes steps on screen.</figcaption>
+          <button type="button" class="btn quiet" id="agent-replay">Replay</button>
+        </div>
+      </figure>
+    </article>
+    <article class="venture">
+      <div>
+        <h3>Nalem Study Circle</h3>
+        <p class="tagline">Free, personalized learning paths.</p>
+        <p>A learning platform I founded for students who have plenty of resources and no route through them. It turns a goal into a personalized pathway, paces study with an AI-powered focus manager, and pairs learners with a peer community that keeps them accountable.</p>
+        <p>It earned me a Conrad Innovator recognition in the Conrad Challenge at Space Center Houston, and was featured by CanvasRebel in 2025 and Bold Journey in 2026.</p>
+        <div class="venture-links"><a class="btn primary" href="https://nalemstudycircle.org">Visit Nalem Study Circle</a><a class="btn quiet" href="https://blog.nalemstudycircle.org">Read the blog</a></div>
+      </div>
+      <figure class="plate">
+        <div class="reach" id="reach"></div>
+        <figcaption>Nalem Study Circle’s reach, on a log scale where each step to the right is ten times more.</figcaption>
+      </figure>
+    </article>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="section wrap" id="projects" data-nav="projects" style="padding-top:clamp(40px,5vw,96px)">
+    <h2 class="mask-h">Projects</h2>
+    <p class="lead">Built over hackathon weekends and long summers, from voice games to robot arms.</p>
+    <p class="subhead">Hackathons <span>Built in a weekend</span></p>
+    <div>
+      <article class="project">
+        <div><h3>MemoryMesh</h3><p class="p-event">Cal Hacks 12.0</p></div>
+        <div class="p-body">
+          <p>An AI co-pilot for people living with Alzheimer’s. Real-time computer vision watches for moments of confusion, like standing at the stove with no pot or opening the fridge again and again, and a Google Home Mini responds with calm, specific voice guidance.</p>
+          <p class="p-stack">Computer vision, real-time behavior detection, voice interaction</p>
+        </div>
+        <svg class="p-fig" viewBox="0 0 240 132" fill="none" stroke-width="1.4" aria-hidden="true">
+          <rect class="soft" x="8" y="14" width="28" height="20" rx="3"/><rect class="soft" x="44" y="14" width="28" height="20" rx="3"/><rect class="soft" x="80" y="14" width="28" height="20" rx="3"/>
+          <rect class="acc" x="116" y="14" width="28" height="20" rx="3" fill="rgba(43,63,224,.12)"/>
+          <rect class="soft" x="152" y="14" width="28" height="20" rx="3"/><rect class="soft" x="188" y="14" width="28" height="20" rx="3"/>
+          <path class="soft" d="M8 46 H216"/><circle class="accf" cx="130" cy="46" r="3.5" stroke="none"/><path class="acc" d="M130 50 V82"/>
+          <rect class="ink" x="112" y="84" width="36" height="36" rx="18"/>
+          <circle class="inkf" cx="124" cy="102" r="1.6" stroke="none"/><circle class="inkf" cx="130" cy="102" r="1.6" stroke="none"/><circle class="inkf" cx="136" cy="102" r="1.6" stroke="none"/>
+          <path class="acc wave" d="M158 92 q6 10 0 20"/><path class="acc wave" d="M166 86 q10 16 0 32"/><path class="acc wave" d="M174 80 q14 22 0 44"/>
+        </svg>
+      </article>
+      <article class="project">
+        <div><h3>WayFinder AI</h3><p class="p-event">LA Hacks 2025</p></div>
+        <div class="p-body">
+          <p>Helps you decide where to go and what to do, whether it’s a slow Sunday at home or your first afternoon in a country where you don’t speak the language.</p>
+          <p class="p-stack">Recommendations, location context, conversational planning</p>
+        </div>
+        <svg class="p-fig" viewBox="0 0 240 132" fill="none" stroke-width="1.4" aria-hidden="true">
+          <g class="softf" stroke="none"><circle cx="22" cy="24" r="2.6"/><circle cx="64" cy="14" r="2.6"/><circle cx="106" cy="30" r="2.6"/><circle cx="182" cy="18" r="2.6"/><circle cx="222" cy="40" r="2.6"/><circle cx="16" cy="78" r="2.6"/><circle cx="92" cy="96" r="2.6"/><circle cx="142" cy="62" r="2.6"/><circle cx="206" cy="92" r="2.6"/><circle cx="54" cy="118" r="2.6"/><circle cx="168" cy="120" r="2.6"/><circle cx="226" cy="122" r="2.6"/></g>
+          <path class="acc route" d="M30 104 C 60 70, 70 52, 110 58 S 160 96, 196 64 S 214 30, 196 24"/>
+          <circle class="accf" cx="30" cy="104" r="4" stroke="none"/><circle class="ink" cx="110" cy="58" r="4" fill="var(--paper)"/><circle class="ink" cx="164" cy="80" r="4" fill="var(--paper)"/>
+          <path class="ink" d="M196 6 c-8 0-12 6-12 11 c0 8 12 19 12 19 s12-11 12-19 c0-5-4-11-12-11 z" fill="var(--paper)"/><circle class="accf" cx="196" cy="17" r="3.4" stroke="none"/>
+        </svg>
+      </article>
+      <article class="project">
+        <div><h3>SpeakScribe</h3><p class="p-event">PennApps</p></div>
+        <div class="p-body">
+          <p>Turns a lecture into notes while it’s happening and summarizes photos of slides and diagrams, so students can listen instead of racing to transcribe.</p>
+          <p class="p-stack">Speech to text, image summarization</p>
+        </div>
+        <svg class="p-fig" viewBox="0 0 240 132" fill="none" stroke-width="1.4" aria-hidden="true">
+          <g class="inkf" stroke="none"><rect class="bar" x="10" y="56" width="4" height="20" rx="2"/><rect class="bar" x="18" y="46" width="4" height="40" rx="2"/><rect class="bar" x="26" y="38" width="4" height="56" rx="2"/><rect class="bar" x="34" y="50" width="4" height="32" rx="2"/><rect class="bar" x="42" y="30" width="4" height="72" rx="2"/><rect class="bar" x="50" y="44" width="4" height="44" rx="2"/><rect class="bar" x="58" y="54" width="4" height="24" rx="2"/><rect class="bar" x="66" y="40" width="4" height="52" rx="2"/><rect class="bar" x="74" y="50" width="4" height="32" rx="2"/><rect class="bar" x="82" y="58" width="4" height="16" rx="2"/><rect class="bar" x="90" y="48" width="4" height="36" rx="2"/><rect class="bar" x="98" y="56" width="4" height="20" rx="2"/></g>
+          <path class="acc" d="M116 66 H136 M130 60 L136 66 L130 72"/>
+          <g class="softf" stroke="none"><rect x="150" y="34" width="80" height="6" rx="3"/><rect x="150" y="48" width="64" height="6" rx="3"/><rect x="150" y="62" width="74" height="6" rx="3"/><rect x="150" y="76" width="52" height="6" rx="3"/><rect x="150" y="90" width="68" height="6" rx="3"/></g>
+          <rect class="accf" x="150" y="34" width="34" height="6" rx="3" stroke="none"/>
+        </svg>
+      </article>
+    </div>
+    <p class="subhead">Earlier builds <span>Each has a photo and a build video</span></p>
+    <ul class="archive" id="archive"></ul>
+  </section>
+
+  <!-- ================= HONORS ================= -->
+  <section class="section wrap" id="honors" data-nav="honors" style="padding-top:clamp(40px,5vw,96px)">
+    <h2 class="mask-h">Honors</h2>
+    <div class="honors-grid">
+      <figure class="plate">
+        <p class="chart-title">Math and programming competitions</p>
+        <p class="chart-sub">Share of the field each result placed ahead of</p>
+        <div class="ladder" id="ladder"></div>
+        <figcaption>“Top 10 of 600 teams” means ahead of at least 590, or 98%. Bars start at zero.</figcaption>
+      </figure>
+      <div class="honors-side">
+        <figure class="plate">
+          <p class="chart-title">Hackathons</p>
+          <div class="dots" id="hack-dots" role="img" aria-label="20 hackathons, 5 wins"></div>
+          <p class="dots-key"><b>5 wins</b> in 20 events, including the SFBU Innovatively Inclusive Award at Viking Hacks. The only high school participant at MIT Hacks 2026, the UC Berkeley AI Hackathon 2026, Cal Hacks 12.0 and LA Hacks 2025. Joined the WaffleHacks organizing team after competing.</p>
+        </figure>
+        <ul class="awards">
+          <li><b>Conrad Innovator</b><span>Conrad Challenge, Space Center Houston, Cyber-Security and Technology category, for Nalem Study Circle</span></li>
+          <li><b>First place, county science fair</b><span>Spintronic reservoir computing. Second place at school.</span></li>
+          <li><b>School honors</b><span>Computer Science Award, Automation and Robotics Awards, Honour’s List, President’s Award List</span></li>
+          <li><b>CALICO</b><span>Competed at UC Berkeley’s programming contest</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="edu">
+      <h3>Education</h3>
+      <div class="edu-grid">
+        <div>
+          <p class="edu-k">High school diploma, expected June 2027</p>
+          <p>Mathematics dual enrollment.</p>
+        </div>
+        <div>
+          <p class="edu-k">Independent coursework</p>
+          <ul class="chiplist" aria-label="Courses">
+            <li>Real Analysis</li><li>Abstract Algebra</li><li>Topology</li><li>Complex Analysis</li><li>Differential Geometry</li><li>PDEs</li><li>Mechanics</li><li>Electricity and Magnetism</li><li>Quantum Mechanics</li>
+          </ul>
+          <p class="small" style="margin-top:12px">Ten MIT OpenCourseWare mathematics courses and three physics courses, plus four Stanford algorithms certificates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PATH ================= -->
+  <section id="path" data-nav="path" style="padding-top:clamp(56px,7vw,120px)">
+    <div class="hscroll" id="hscroll">
+      <div class="path-pin">
+        <div class="path-head wrap">
+          <h2 class="mask-h">Path</h2>
+          <p class="lead">From a first Python script in 2018 to research labs across the country.</p>
+        </div>
+        <div class="htrack" id="htrack">
+          <article class="year"><p class="yr">2018</p><p>Wrote my first Python program.</p></article>
+          <article class="year"><p class="yr">2019</p><p>Built my first Arduino robot.</p></article>
+          <article class="year"><p class="yr">2020</p><p>Competed in VEX IQ robotics.</p></article>
+          <article class="year"><p class="yr">2021</p><p>Shipped my first Flutter app. Started interning in software and data science at Alan AI and PilotCity.</p></article>
+          <article class="year"><p class="yr">2022</p><p>Built voice-enabled apps at Alan AI, including a voice-controlled Pong game for children with disabilities.</p></article>
+          <article class="year"><p class="yr">2023</p><p>Built an AI-powered robot arm with computer vision. Joined ASDRP as an engineering research scholar.</p></article>
+          <article class="year"><p class="yr">2024</p><p>Led an ASDRP team building Raspberry Pi drones with ML obstacle avoidance, and ran ROS 2 self-driving simulations.</p></article>
+          <article class="year"><p class="yr">2025</p><p>Task matrices at Algoverse, a NeurIPS workshop poster. Founded Nalem Study Circle. Started spintronic reservoir computing. Built MemoryMesh at Cal Hacks 12.0.</p></article>
+          <article class="year"><p class="yr">2026</p><p>Research at Notre Dame, UC San Diego, Yale, George Washington University and CU Boulder. First-author paper accepted at AAS/AIAA. Now leading formal-verification research with Capital One.</p></article>
+          <article class="year"><p class="yr">2027</p><p>High school diploma, expected in June.</p></article>
+        </div>
+      </div>
+    </div>
+    <div class="wrap also">
+      <div>
+        <h3>Teaching</h3>
+        <ul>
+          <li>Volunteer instructor for 30+ students in Stanford’s Code in Place.</li>
+          <li>100+ hours teaching middle-school VEX IQ robotics at Irvington Robotics Academy.</li>
+          <li>A <a href="https://www.youtube.com/@programmingwithrishinalem">YouTube channel</a> on AI with 2,151 subscribers and 150,000+ views.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Industry</h3>
+        <ul>
+          <li><b>Alan AI</b>, software and data science intern, 2021–2023. Built an AI support system that cut call wait times by 40% and web interfaces that raised FAQ self-service by 30%.</li>
+          <li><b>PilotCity</b>. Built the main website in Vue.js and HTML; the work improved employer–intern communication by 15%.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Press and writing</h3>
+        <ul>
+          <li><a href="https://canvasrebel.com/meet-pranay-rishi/">Meet Pranay Rishi</a>, CanvasRebel, 2025</li>
+          <li><a href="https://boldjourney.com/meet-pranay-rishi/">Meet Pranay Rishi</a>, Bold Journey, 2026</li>
+          <li>Essays on <a href="https://medium.com/@pranayrishi.nalem">Medium</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap skills">
+      <h3>Skills</h3>
+      <dl class="skill-grid">
+        <div><dt>Formal methods</dt><dd>Lean 4 and Mathlib, proof verification and benchmarking, LLM-guided proof search</dd></div>
+        <div><dt>Machine learning</dt><dd>PyTorch, TensorFlow, scikit-learn, LoRA finetuning, diffusion transformers, masked diffusion, world models, reinforcement learning, vision-language models, CNNs and OpenCV, physics-informed networks, graph models</dd></div>
+        <div><dt>Scientific computing</dt><dd>Protein graph and spectral analysis, OOMMF micromagnetics, SciPy, NumPy, ODE and hybrid-system simulation, Lyapunov exponents, Monte Carlo, ROS 2</dd></div>
+        <div><dt>Languages and tools</dt><dd>Python, C++, C, JavaScript, Vue.js, HTML and CSS, MATLAB, Flutter and Dart, Git, Linux, Raspberry Pi, Arduino</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section wrap contact" id="contact" data-nav="contact">
+    <h2 class="mask-h">Contact</h2>
+    <p class="lead">I’m open to research collaborations, internships, and long conversations about representations, agents and proofs.</p>
+    <div class="email-row">
+      <a class="email" id="email" href="mailto:pranayrishi.nalem@gmail.com">pranayrishi.nalem@gmail.com</a>
+      <button type="button" class="btn" id="copy-email">Copy email</button>
+    </div>
+    <ul class="links" id="links"></ul>
+  </section>
+</main>
+
+<footer>
+  <div class="foot">
+    <p>© 2026 Pranay Rishi Nalem</p>
+    <p>Press <kbd>⌘</kbd> <kbd>K</kbd> to jump anywhere. <a href="#top">Back to top</a></p>
+  </div>
+</footer>
+
+<div class="layer" id="cmdk" hidden>
+  <div class="overlay" data-close></div>
+  <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Command menu">
+    <div class="cmdk-input-row">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="M13.5 13.5L17 17"/></svg>
+      <input class="cmdk-input" id="cmdk-input" type="text" role="combobox" aria-expanded="true" aria-controls="cmdk-list" aria-autocomplete="list" placeholder="Jump to research, a project, or a link" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="cmdk-list" id="cmdk-list" role="listbox" aria-label="Commands"></div>
+    <div class="cmdk-foot"><span><kbd>↑</kbd><kbd>↓</kbd> Move</span><span><kbd>↵</kbd> Select</span><span><kbd>Esc</kbd> Close</span></div>
+  </div>
+</div>
+
+<div class="layer" id="drawer" hidden>
+  <div class="overlay" data-close></div>
+  <aside class="drawer-panel" id="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title" tabindex="-1">
+    <div class="drawer-handle" aria-hidden="true"></div>
+    <div class="drawer-head" id="drawer-head">
+      <span id="drawer-meta"></span>
+      <button type="button" class="icon-btn" data-close aria-label="Close"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 2l10 10M12 2L2 12"/></svg></button>
+    </div>
+    <div class="drawer-body" id="drawer-body">
+      <div class="drawer-media"><img id="drawer-img" alt=""></div>
+      <h3 id="drawer-title"></h3>
+      <p id="drawer-desc"></p>
+      <dl class="drawer-facts">
+        <div><dt>Built with</dt><dd id="drawer-stack"></dd></div>
+        <div><dt>Year</dt><dd id="drawer-year"></dd></div>
+      </dl>
+      <a class="btn primary" id="drawer-link" href="#">Watch the build video</a>
+    </div>
+    <nav class="drawer-nav" aria-label="Other builds">
+      <button type="button" id="drawer-prev"></button>
+      <button type="button" id="drawer-next"></button>
     </nav>
+  </aside>
+</div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-subtitle">Software Developer & Robotics Engineer</div>
-            <h1 class="hero-title">Pranay Rishi Nalem</h1>
-            <p class="hero-description">
-                Transforming ideas into intelligent solutions through cutting-edge technology, 
-                AI innovation, and purposeful engineering that makes a difference.
-            </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">
-                    <i class="fas fa-rocket"></i>
-                    Explore My Work
-                </a>
-                <a href="#contact" class="btn btn-outline">
-                    <i class="fas fa-envelope"></i>
-                    Let's Connect
-                </a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-            <div>Scroll to Discover</div>
-        </div>
-    </section>
+<ol class="toaster" id="toaster" aria-live="polite"></ol>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- About Section -->
-        <section id="about" class="section" style="background: var(--background-secondary);">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-subtitle">Get to Know Me</div>
-                    <h2 class="section-title">About Me</h2>
-                    <p class="section-description">
-                        Passionate innovator dedicated to creating technology solutions that empower others and drive positive change in the world.
-                    </p>
-                </div>
-                <div class="about-grid">
-                    <div class="about-content">
-                        <div class="about-text">
-                            <h3>Building the Future, One Innovation at a Time</h3>
-                            <p>
-                                I have a deep passion for robotics and programming, constantly preparing to pursue my dreams in the future. 
-                                I am always open to new opportunities that broaden my skill set in robotics, AI, and software development.
-                            </p>
-                            <p>
-                                With experience in over 6 programming languages and 4 years of hands-on experience with robotics, 
-                                I've developed everything from AI-powered applications to autonomous robotics systems, always with 
-                                a focus on creating meaningful impact.
-                            </p>
-                        </div>
-                        <div class="about-stats">
-                            <div class="stat-item">
-                                <div class="stat-number">6+</div>
-                                <div class="stat-label">Programming Languages</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">4+</div>
-                                <div class="stat-label">Years Experience</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">15+</div>
-                                <div class="stat-label">Projects Completed</div>
-                            </div>
-                        </div>
-                        <a href="#projects" class="btn btn-primary">
-                            <i class="fas fa-code"></i>
-                            View My Projects
-                        </a>
-                    </div>
-                    <div class="about-image">
-                        <img src="images/Rishi_Image.jpg" alt="Pranay Rishi Nalem - Software Developer and Robotics Engineer">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section" style="background: var(--background-secondary);">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-subtitle">Technical Expertise</div>
-                    <h2 class="section-title">Skills & Technologies</h2>
-                    <p class="section-description">
-                        A comprehensive toolkit of modern technologies and frameworks that power innovative solutions.
-                    </p>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h4>Programming Languages</h4>
-                        <p>Expert proficiency in Python, C++, JavaScript, Java, and Flutter/Dart for diverse application development and system programming.</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h4>Robotics & Hardware</h4>
-                        <p>Extensive experience with Arduino, Raspberry Pi, VEX IQ, Microbit, and advanced sensor integration for autonomous systems.</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h4>AI & Machine Learning</h4>
-                        <p>Specializing in voice assistants, computer vision, natural language processing, and AI integration platforms like Alan AI.</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h4>Application Development</h4>
-                        <p>Full-stack development expertise in Flutter mobile apps, web applications, and intuitive UI/UX design principles.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- Nonprofit Section -->
-        <section id="nonprofit" class="section" style="background: var(--background-secondary);">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-subtitle">Social Impact</div>
-                    <h2 class="section-title">Making Education Accessible</h2>
-                    <p class="section-description">
-                        Leveraging technology to democratize learning and create opportunities for students worldwide.
-                    </p>
-                </div>
-                <div class="nonprofit-showcase">
-                    <div class="nonprofit-content">
-                        <span class="nonprofit-logo">🧠</span>
-                        <h3 class="nonprofit-title">Nalem Study Circle</h3>
-                        <p class="nonprofit-description">
-                            A nonprofit organization dedicated to providing AI-powered personalized learning tools for students and lifelong learners. 
-                            Our mission is to make quality education accessible to everyone, regardless of background or location.
-                        </p>
-                        <div class="nonprofit-cta">
-                            <a href="https://nalemstudycircle.com" target="_blank" class="nonprofit-btn">
-                                <i class="fas fa-globe"></i>
-                                Visit Our Website
-                            </a>
-                            <a href="https://blog.nalemstudycircle.com" target="_blank" class="nonprofit-btn">
-                                <i class="fas fa-blog"></i>
-                                Read Our Blog
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-subtitle">Portfolio Showcase</div>
-                    <h2 class="section-title">Featured Projects</h2>
-                    <p class="section-description">
-                        A collection of innovative projects spanning AI, robotics, mobile development, and emerging technologies.
-                    </p>
-                </div>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-gamepad"></i>
-                        </div>
-                        <div class="project-content">
-                            <h4 class="project-title">Alan AI Ping Pong Game</h4>
-                            <div class="project-date">April 2022 - June 2022</div>
-                            <p class="project-description">
-                                Revolutionary voice-enabled ping pong game developed during my Alan AI internship, featuring 
-                                advanced voice assistant integration and real-time game control through natural language commands.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Alan AI</span>
-                                <span class="tech-tag">Voice Recognition</span>
-                                <span class="tech-tag">Game Development</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://www.youtube.com/watch?v=ODQWSnVnlJk" target="_blank" class="project-link youtube">
-                                    <i class="fab fa-youtube"></i>
-                                    Watch Demo
-                                </a>
-                                <a href="https://github.com/pranayrishi/Alan-AI-Ping-Pong-Game" target="_blank" class="project-link github">
-                                    <i class="fab fa-github"></i>
-                                    View Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="project-content">
-                            <h4 class="project-title">Alan AI GitHub FAQ Application</h4>
-                            <div class="project-date">June 2022 - July 2022</div>
-                            <p class="project-description">
-                                Intelligent GitHub application using Alan AI that helps companies reduce call wait times by 
-                                automating FAQ responses with natural language processing and voice interaction capabilities.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Alan AI</span>
-                                <span class="tech-tag">GitHub API</span>
-                                <span class="tech-tag">NLP</span>
-                                <span class="tech-tag">Automation</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://www.youtube.com/watch?v=w79sVJ-q-Tc" target="_blank" class="project-link youtube">
-                                    <i class="fab fa-youtube"></i>
-                                    Watch Demo
-                                </a>
-                                <a href="https://github.com/pranayrishi/Alan-AI-Github-FAQ-Project" target="_blank" class="project-link github">
-                                    <i class="fab fa-github"></i>
-                                    View Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="project-content">
-                            <h4 class="project-title">AI-Powered Robot Arm</h4>
-                            <div class="project-date">March 2023 - April 2023</div>
-                            <p class="project-description">
-                                Advanced AI-enabled robotic arm built with Arduino and Raspberry Pi, featuring computer vision, 
-                                autonomous control, and precise manipulation capabilities for complex tasks.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Arduino</span>
-                                <span class="tech-tag">Raspberry Pi</span>
-                                <span class="tech-tag">Computer Vision</span>
-                                <span class="tech-tag">AI Control</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://www.youtube.com/watch?v=CBZo3_qBZF0" target="_blank" class="project-link youtube">
-                                    <i class="fab fa-youtube"></i>
-                                    Watch Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="project-content">
-                            <h4 class="project-title">Microbit Caesar Cipher System</h4>
-                            <div class="project-date">March 2023 - April 2023</div>
-                            <p class="project-description">
-                                Sophisticated encryption and decryption system using Microbit with radio technology for 
-                                secure data transmission, implementing classical cryptography with modern hardware.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Microbit</span>
-                                <span class="tech-tag">Cryptography</span>
-                                <span class="tech-tag">Radio Communication</span>
-                                <span class="tech-tag">Security</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://www.youtube.com/watch?v=bIt3S9f6cc0" target="_blank" class="project-link youtube">
-                                    <i class="fab fa-youtube"></i>
-                                    Watch Demo
-                                </a>
-                                <a href="https://github.com/pranayrishi/Radio-Communication-Encryption" target="_blank" class="project-link github">
-                                    <i class="fab fa-github"></i>
-                                    View Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <div class="project-content">
-                            <h4 class="project-title">Dillman's Antiquities Mobile App</h4>
-                            <div class="project-date">May 2023 - June 2023</div>
-                            <p class="project-description">
-                                Comprehensive Flutter mobile application for antique marketplace, improving buyer-seller 
-                                communication by 10% with intuitive UI design and enhanced user experience features.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">Dart</span>
-                                <span class="tech-tag">Mobile Development</span>
-                                <span class="tech-tag">UI/UX Design</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://www.youtube.com/watch?v=5Q0CJFjN8Tc" target="_blank" class="project-link youtube">
-                                    <i class="fab fa-youtube"></i>
-                                    Watch Demo
-                                </a>
-                                <a href="https://github.com/pranayrishi/Dillman-s-Emporium-App" target="_blank" class="project-link github">
-                                    <i class="fab fa-github"></i>
-                                    View Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="project-content">
-                            <h4 class="project-title">Hella Healthy Essentials Survey</h4>
-                            <div class="project-date">June 2022 - July 2022</div>
-                            <p class="project-description">
-                                Intelligent product recommendation survey system that improved product matching accuracy by 20%, 
-                                utilizing advanced algorithms to provide personalized health and wellness recommendations.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Algorithm Design</span>
-                                <span class="tech-tag">Data Analysis</span>
-                                <span class="tech-tag">Recommendation System</span>
-                                <span class="tech-tag">Web Development</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://www.youtube.com/watch?v=bBYx4afhzqA" target="_blank" class="project-link youtube">
-                                    <i class="fab fa-youtube"></i>
-                                    Watch Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- YouTube Videos Section -->
-        <section id="youtube" class="section youtube-section" style="background: var(--background-secondary);">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-subtitle">Video Content</div>
-                    <h2 class="section-title">Latest YouTube Videos</h2>
-                    <p class="section-description">
-                        Explore my latest programming tutorials, project demonstrations, and tech insights on YouTube.
-                    </p>
-                </div>
-                <div class="youtube-channel-info">
-                    <div class="youtube-logo">
-                        <i class="fab fa-youtube"></i>
-                    </div>
-                    <div class="youtube-channel-details">
-                        <h3>Programming with Rishi Nalem</h3>
-                        <p>@programmingwithrishinalem</p>
-                    </div>
-                </div>
-                <div id="youtube-videos-container">
-                    <div class="youtube-loading">
-                        <div class="youtube-loading-spinner"></div>
-                        <p>Loading latest videos...</p>
-                    </div>
-                </div>
-                <div class="youtube-cta">
-                    <a href="https://www.youtube.com/@programmingwithrishinalem" target="_blank" class="youtube-subscribe-btn">
-                        <i class="fab fa-youtube"></i>
-                        Subscribe to My Channel
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Content Creation Section -->
-        <section id="content" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-subtitle">Knowledge Sharing</div>
-                    <h2 class="section-title">Content & Community</h2>
-                    <p class="section-description">
-                        Sharing insights, tutorials, and discussions across multiple platforms to help others learn and grow in technology.
-                    </p>
-                </div>
-                <div class="content-grid">
-                    <div class="content-card">
-                        <div class="content-header">
-                            <div class="content-icon">📝</div>
-                            <h3 class="content-title">Medium Articles</h3>
-                            <p class="content-platform">Technical Writing Platform</p>
-                        </div>
-                        <div class="content-body">
-                            <p class="content-description">
-                                In-depth technical articles, tutorials, and insights about software development, AI, and robotics. 
-                                Sharing knowledge and experiences to help fellow developers and enthusiasts.
-                            </p>
-                            <a href="https://medium.com/@pranayrishi.nalem" target="_blank" class="content-link">
-                                Read My Articles
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="content-card">
-                        <div class="content-header">
-                            <div class="content-icon">🗣️</div>
-                            <h3 class="content-title">Reddit Community</h3>
-                            <p class="content-platform">Discussion & Engagement</p>
-                        </div>
-                        <div class="content-body">
-                            <p class="content-description">
-                                Active participation in tech communities, sharing projects, answering questions, and engaging in 
-                                meaningful discussions about programming and innovation.
-                            </p>
-                            <a href="https://www.reddit.com/r/PranayRishiNalem/" target="_blank" class="content-link">
-                                Join the Discussion
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="content-card">
-                        <div class="content-header">
-                            <div class="content-icon">❓</div>
-                            <h3 class="content-title">Quora Insights</h3>
-                            <p class="content-platform">Q&A Knowledge Sharing</p>
-                        </div>
-                        <div class="content-body">
-                            <p class="content-description">
-                                Providing detailed answers to technology-related questions, sharing expertise in programming, 
-                                robotics, and AI to help learners worldwide.
-                            </p>
-                            <a href="https://www.quora.com/profile/Rishi-Nalem" target="_blank" class="content-link">
-                                View My Answers
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section" style="background: var(--background-secondary);">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-subtitle">Let's Connect</div>
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="section-description">
-                        Ready to collaborate on innovative projects or discuss exciting opportunities? Let's create something amazing together.
-                    </p>
-                </div>
-                <div class="contact-grid">
-                    <div class="contact-content">
-                        <h3 class="contact-title">Ready to Build the Future?</h3>
-                        <p class="contact-description">
-                            Whether you're looking for a dedicated developer, robotics engineer, or someone passionate about 
-                            AI and innovation, I'm always excited to discuss new projects and opportunities.
-                        </p>
-                        <a href="mailto:pranayrishi.nalem@gmail.com" class="btn btn-primary">
-                            <i class="fas fa-envelope"></i>
-                            Send Me an Email
-                        </a>
-                    </div>
-                    <div class="social-grid">
-                        <div class="social-card">
-                            <div class="social-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <h4>LinkedIn</h4>
-                            <p>Professional networking and career updates</p>
-                            <a href="https://www.linkedin.com/in/rishi-nalem-8161b7244/" target="_blank" class="social-link">Connect with me</a>
-                        </div>
-                        <div class="social-card">
-                            <div class="social-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <h4>GitHub</h4>
-                            <p>Open source projects and code repositories</p>
-                            <a href="https://github.com/pranayrishi" target="_blank" class="social-link">View my code</a>
-                        </div>
-                        <div class="social-card">
-                            <div class="social-icon">
-                                <i class="fab fa-youtube"></i>
-                            </div>
-                            <h4>YouTube</h4>
-                            <p>Project demonstrations and tutorials</p>
-                            <a href="https://www.youtube.com/@programmingwithrishinalem" target="_blank" class="social-link">Watch videos</a>
-                        </div>
-                        <div class="social-card">
-                            <div class="social-icon">
-                                <i class="fab fa-medium"></i>
-                            </div>
-                            <h4>Medium</h4>
-                            <p>Technical articles and insights</p>
-                            <a href="https://medium.com/@pranayrishi.nalem" target="_blank" class="social-link">Read articles</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">Rishi Nalem</div>
-            <p class="footer-text">
-                Building innovative solutions that bridge technology and human potential.
-            </p>
-            <div class="footer-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#youtube">YouTube</a>
-                <a href="#content">Content</a>
-                <a href="#nonprofit">Nonprofit</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Pranay Rishi Nalem. All rights reserved. | Designed with ❤️ for innovation.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Page Loading Animation
-        window.addEventListener('load', () => {
-            const loader = document.getElementById('pageLoader');
-            setTimeout(() => {
-                loader.classList.add('hidden');
-            }, 1500);
-        });
-
-        // Intersection Observer for Animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all animatable elements
-        document.addEventListener('DOMContentLoaded', () => {
-            const animatableElements = document.querySelectorAll('.section-header, .about-content, .about-image, .skill-card, .content-card, .nonprofit-showcase, .project-card, .youtube-channel-info, .youtube-video-card, .youtube-cta, .contact-content, .social-grid');
-            
-            animatableElements.forEach((el, index) => {
-                el.style.transitionDelay = `${index * 0.1}s`;
-                observer.observe(el);
-            });
-
-            // Load YouTube videos after DOM is ready
-            loadYouTubeVideos();
-        });
-
-        // Smooth Scrolling with Active Navigation
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('section[id]');
-
-        function updateActiveNavLink() {
-            const scrollY = window.pageYOffset;
-            
-            sections.forEach(section => {
-                const sectionHeight = section.offsetHeight;
-                const sectionTop = section.offsetTop - 100;
-                const sectionId = section.getAttribute('id');
-                
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === `#${sectionId}`) {
-                            link.classList.add('active');
-                        }
-                    });
-                }
-            });
-        }
-
-        // Navbar Scroll Effect
-        function updateNavbarStyle() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        }
-
-        // Scroll Event Listener
-        window.addEventListener('scroll', () => {
-            updateActiveNavLink();
-            updateNavbarStyle();
-        });
-
-        // Smooth Scrolling for Anchor Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Mobile Menu Toggle
-        const mobileMenu = document.getElementById('mobileMenu');
-        const navLinksContainer = document.getElementById('navLinks');
-
-        mobileMenu.addEventListener('click', () => {
-            navLinksContainer.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinksContainer.classList.remove('active');
-                mobileMenu.classList.remove('active');
-            });
-        });
-
-        // Typing Animation for Hero Text
-        function typeWriter(element, text, speed = 50) {
-            let i = 0;
-            element.innerHTML = '';
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        // Enhanced Performance
-        // Lazy loading for images
-        const images = document.querySelectorAll('img[data-src]');
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.classList.remove('lazy');
-                    imageObserver.unobserve(img);
-                }
-            });
-        });
-
-        images.forEach(img => imageObserver.observe(img));
-
-        // Parallax Effect for Hero Section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
-
-        // Initialize animations after page load
-        setTimeout(() => {
-            document.body.classList.add('loaded');
-        }, 100);
-
-        // Error handling for external links
-        document.querySelectorAll('a[target="_blank"]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                try {
-                    // Analytics tracking could go here
-                    console.log('External link clicked:', this.href);
-                } catch (error) {
-                    console.error('Error tracking external link:', error);
-                }
-            });
-        });
-
-        // Keyboard navigation support
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Tab') {
-                document.body.classList.add('keyboard-navigation');
-            }
-        });
-
-        document.addEventListener('mousedown', () => {
-            document.body.classList.remove('keyboard-navigation');
-        });
-
-        // YouTube Videos Functionality - Real API Integration
-        async function loadYouTubeVideos() {
-            const container = document.getElementById('youtube-videos-container');
-            
-            // YouTube Data API v3 Configuration
-            // IMPORTANT: For production, store this API key securely (server-side)
-            // Get your API key from: https://console.developers.google.com/
-            const YOUTUBE_API_KEY = 'AIzaSyBNZiw7ZG-OzMb4G1UKWp5k1QH8tqD81Hc'; // Replace with your actual API key
-            const CHANNEL_HANDLE = '@programmingwithrishinalem';
-            const MAX_RESULTS = 6;
-            
-            try {
-                // First, get the channel ID from the handle
-                const channelResponse = await fetch(
-                    `https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&q=${CHANNEL_HANDLE}&key=${YOUTUBE_API_KEY}`
-                );
-                
-                if (!channelResponse.ok) {
-                    throw new Error('Failed to fetch channel information');
-                }
-                
-                const channelData = await channelResponse.json();
-                if (!channelData.items || channelData.items.length === 0) {
-                    throw new Error('Channel not found');
-                }
-                
-                const channelId = channelData.items[0].snippet.channelId;
-                
-                // Get the latest videos from the channel
-                const videosResponse = await fetch(
-                    `https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}&type=video`
-                );
-                
-                if (!videosResponse.ok) {
-                    throw new Error('Failed to fetch videos');
-                }
-                
-                const videosData = await videosResponse.json();
-                
-                // Get detailed video statistics
-                const videoIds = videosData.items.map(item => item.id.videoId).join(',');
-                const statsResponse = await fetch(
-                    `https://www.googleapis.com/youtube/v3/videos?key=${YOUTUBE_API_KEY}&id=${videoIds}&part=statistics,contentDetails`
-                );
-                
-                const statsData = await statsResponse.json();
-                
-                // Combine video data with statistics
-                const videos = videosData.items.map((video, index) => {
-                    const stats = statsData.items[index];
-                    return {
-                        id: video.id.videoId,
-                        title: video.snippet.title,
-                        description: video.snippet.description,
-                        thumbnail: video.snippet.thumbnails.high?.url || video.snippet.thumbnails.medium?.url,
-                        publishedAt: formatDate(video.snippet.publishedAt),
-                        viewCount: formatViewCount(stats.statistics.viewCount),
-                        duration: formatDuration(stats.contentDetails.duration)
-                    };
-                });
-                
-                // Create video grid
-                displayVideos(videos, container);
-                
-            } catch (error) {
-                console.error('Error loading YouTube videos:', error);
-                
-                // Fallback: Show message and load sample videos for demo
-                console.log('Falling back to demo videos...');
-                await loadFallbackVideos(container);
-            }
-        }
-
-        // Fallback function with your actual videos for demo purposes
-        async function loadFallbackVideos(container) {
-            // Simulate loading delay
-            await new Promise(resolve => setTimeout(resolve, 1000));
-            
-            const demoVideos = [
-                {
-                    id: 'ODQWSnVnlJk',
-                    title: 'Alan AI Ping Pong Game - Voice-Controlled Gaming Revolution',
-                    description: 'Watch how I built a revolutionary voice-controlled ping pong game using Alan AI. This project showcases advanced voice recognition and real-time game control through natural language commands.',
-                    thumbnail: 'https://img.youtube.com/vi/ODQWSnVnlJk/maxresdefault.jpg',
-                    duration: '5:32',
-                    viewCount: '1.2K',
-                    publishedAt: '2 months ago'
-                },
-                {
-                    id: 'w79sVJ-q-Tc',
-                    title: 'Building an AI-Powered GitHub FAQ Bot with Alan AI',
-                    description: 'Learn how to create an intelligent FAQ system using Alan AI and GitHub integration. Perfect for reducing customer support load and automating responses.',
-                    thumbnail: 'https://img.youtube.com/vi/w79sVJ-q-Tc/maxresdefault.jpg',
-                    duration: '8:15',
-                    viewCount: '856',
-                    publishedAt: '3 months ago'
-                },
-                {
-                    id: 'CBZo3_qBZF0',
-                    title: 'AI Robot Arm with Computer Vision - Complete Build Guide',
-                    description: 'Complete tutorial on building an AI-powered robotic arm with Arduino, Raspberry Pi, and computer vision capabilities for autonomous object manipulation.',
-                    thumbnail: 'https://img.youtube.com/vi/CBZo3_qBZF0/maxresdefault.jpg',
-                    duration: '12:40',
-                    viewCount: '2.1K',
-                    publishedAt: '4 months ago'
-                },
-                {
-                    id: 'bIt3S9f6cc0',
-                    title: 'Microbit Caesar Cipher - Radio Encryption Project',
-                    description: 'Implementing classical cryptography with modern hardware. Learn to build a secure communication system using Microbit and radio technology.',
-                    thumbnail: 'https://img.youtube.com/vi/bIt3S9f6cc0/maxresdefault.jpg',
-                    duration: '6:28',
-                    viewCount: '634',
-                    publishedAt: '5 months ago'
-                },
-                {
-                    id: '5Q0CJFjN8Tc',
-                    title: 'Flutter Mobile App Development - Antique Marketplace',
-                    description: 'Complete Flutter app development tutorial for creating a marketplace application with modern UI/UX design and enhanced user experience.',
-                    thumbnail: 'https://img.youtube.com/vi/5Q0CJFjN8Tc/maxresdefault.jpg',
-                    duration: '15:22',
-                    viewCount: '978',
-                    publishedAt: '6 months ago'
-                },
-                {
-                    id: 'bBYx4afhzqA',
-                    title: 'Smart Recommendation System - Health & Wellness Platform',
-                    description: 'Building an intelligent product recommendation system that improves matching accuracy by 20%. Data science meets user experience design.',
-                    thumbnail: 'https://img.youtube.com/vi/bBYx4afhzqA/maxresdefault.jpg',
-                    duration: '9:45',
-                    viewCount: '743',
-                    publishedAt: '7 months ago'
-                }
-            ];
-            
-            // Add demo notice
-            const demoNotice = document.createElement('div');
-            demoNotice.style.cssText = `
-                background: rgba(255, 193, 7, 0.1);
-                border: 1px solid rgba(255, 193, 7, 0.3);
-                border-radius: 8px;
-                padding: 1rem;
-                margin-bottom: 2rem;
-                text-align: center;
-                color: #856404;
-            `;
-            demoNotice.innerHTML = `
-                <i class="fas fa-info-circle"></i>
-                <strong>Demo Mode:</strong> To show live videos, add your YouTube Data API v3 key to the configuration.
-                <a href="https://console.developers.google.com/" target="_blank" style="color: #667eea; margin-left: 0.5rem;">Get API Key</a>
-            `;
-            
-            container.appendChild(demoNotice);
-            displayVideos(demoVideos, container);
-        }
-
-        // Display videos in grid format
-        function displayVideos(videos, container) {
-            const videosHTML = `
-                <div class="youtube-grid">
-                    ${videos.map((video, index) => `
-                        <div class="youtube-video-card" style="transition-delay: ${index * 0.1}s" onclick="openYouTubeVideo('${video.id}')">
-                            <div class="youtube-thumbnail">
-                                <img src="${video.thumbnail}" alt="${video.title}" loading="lazy" 
-                                     onerror="this.src='https://img.youtube.com/vi/${video.id}/hqdefault.jpg'">
-                                <div class="youtube-play-overlay">
-                                    <i class="fas fa-play"></i>
-                                </div>
-                                <div class="youtube-duration">${video.duration}</div>
-                            </div>
-                            <div class="youtube-video-content">
-                                <h4 class="youtube-video-title">${video.title}</h4>
-                                <div class="youtube-video-meta">
-                                    <div class="youtube-video-views">
-                                        <i class="fas fa-eye"></i>
-                                        ${video.viewCount} views
-                                    </div>
-                                    <div class="youtube-video-date">
-                                        <i class="fas fa-clock"></i>
-                                        ${video.publishedAt}
-                                    </div>
-                                </div>
-                                <p class="youtube-video-description">${video.description}</p>
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-
-            container.innerHTML += videosHTML;
-
-            // Trigger animations for video cards
-            setTimeout(() => {
-                const videoCards = document.querySelectorAll('.youtube-video-card');
-                videoCards.forEach(card => {
-                    observer.observe(card);
-                });
-            }, 100);
-        }
-
-        // Utility functions for formatting YouTube API data
-        function formatDate(dateString) {
-            const date = new Date(dateString);
-            const now = new Date();
-            const diffTime = Math.abs(now - date);
-            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-            
-            if (diffDays === 1) return '1 day ago';
-            if (diffDays < 7) return `${diffDays} days ago`;
-            if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
-            if (diffDays < 365) return `${Math.floor(diffDays / 30)} months ago`;
-            return `${Math.floor(diffDays / 365)} years ago`;
-        }
-
-        function formatViewCount(count) {
-            const num = parseInt(count);
-            if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
-            if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
-            return num.toString();
-        }
-
-        function formatDuration(duration) {
-            // Convert ISO 8601 duration (PT4M13S) to readable format (4:13)
-            const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
-            const hours = (match[1] || '').replace('H', '');
-            const minutes = (match[2] || '').replace('M', '');
-            const seconds = (match[3] || '').replace('S', '');
-            
-            let formatted = '';
-            if (hours) formatted += hours + ':';
-            formatted += (minutes || '0').padStart(hours ? 2 : 1, '0') + ':';
-            formatted += (seconds || '0').padStart(2, '0');
-            
-            return formatted;
-        }
-
-        // Function to open YouTube video in new tab
-        function openYouTubeVideo(videoId) {
-            window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
-            
-            // Optional: Track video clicks for analytics
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'video_click', {
-                    'video_id': videoId,
-                    'event_category': 'engagement'
-                });
-            }
-        }
-    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/main.js"></script>
+<script src="assets/viz.js"></script>
+<script src="assets/cat.js"></script>
+<script src="assets/figs.js"></script>
+<script type="module" src="assets/fig6.js"></script>
+<script type="module" src="assets/field.js"></script>
 </body>
 </html>
